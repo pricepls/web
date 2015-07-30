@@ -29,11 +29,11 @@
                     </div>
                 </div>
                 <div class="row" id="social">
-                    <a class="icon twitter" href="http://twitter.com/yourid"></a>
+                    <a class="icon twitter" href="http://twitter.com/priceplsapp"></a>
                     <a class="icon facebook" href="http://facebook.com/pricepls" target="_blank"></a>
                     <a class="icon email" href="mailto:contact@pricepls.com"></a>
                 </div>
             </div>
         </div>
-        
+
 {/content}
