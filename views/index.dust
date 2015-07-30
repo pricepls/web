@@ -1,0 +1,41 @@
+{>layout/}
+{<content}
+            <!-- Status: Shows if the subscription succeeded or not. -->
+            <div id="loading">
+                <span class="status icon"></span>
+            </div>
+            <div class="row" id="intro">
+                <div class="content">
+                    <!-- Pre-Submission: This is what's displayed before the subscription form has been submitted. -->
+                    <div id="pre-subscribe">
+                        <div class="row" id="copy">
+                            <h1>We are <strong> coming </strong><strong> Soon</strong>
+                            <!--<h1>Planning a <strong>trip ? </strong> Let us <strong>HELP</strong>.</h1>
+                            <p>Tell us where you want to go , we will negotiate with our partners to get you the best rates...</p> -->
+                            <p>To get early access Sign Up with your emailid </p>
+                        </div>
+
+                        <div class="row" id="subscribe">
+                            <form class="row" id="mailchimp" action="/inviteme" method="post">
+                                <input type="email" name="email" id="email" placeholder="you@youremail.com">
+                                <button type="submit" name="subscribe" class="button icon submit"></button>
+                            </form>
+                        </div>
+                    </div>
+                    <!-- Post Subscription: This is what’s displayed after the subscription form has been submitted.  -->
+                    <div id="post-subscribe">
+                        <div class="row" id="copy">
+                            <h1>Thank you for <strong>signing up</strong>. We will let you know once we are <strong>ready</strong></h1>
+                        </div>
+                    </div>
+                    <div class="row" id="social">
+                        <a class="icon twitter" href="http://twitter.com/yourid"></a>
+                        <a class="icon facebook" href="http://facebook.com/pricepls" target="_blank"></a>
+                        <a class="icon email" href="mailto:contact@pricepls.com"></a>
+                    </div>
+                </div>
+            </div>
+
+
+
+{/content}

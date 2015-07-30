@@ -1,0 +1,282 @@
+
+* {
+    -webkit-touch-callout: none;
+    -webkit-text-size-adjust: none;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+textarea:focus, input:focus{
+    outline: 0 !important;
+
+}
+*:focus {
+    outline: 0 !important;
+}
+
+.form-control:focus,{
+
+    outline: 0;
+
+}
+.navbar-default{
+
+    border-color: #e8e8e8;
+    border-radius: 0;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    margin-bottom: 0;
+    min-height: 80px;
+    background-color: #F0F0F0;
+}
+
+
+.navbar.navbar-default .navbar-header {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+
+}
+
+.navbar.navbar-default .navbar-header .navbar-brand {
+    height: 100%;
+    padding-left: 86px;
+}
+/*
+#navbar-pricepls-logo {
+  height: 33px;
+  width: 135px;
+}
+*/
+.navbar .nav {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    margin-right: 86px;
+    transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+}
+
+.navbar .nav li a {
+    padding: 0;
+    margin: 4px 20px 0 20px;
+    line-height: 74px;
+    font-size: 11px;
+    font-family: "BentonSans-Medium","Helvetica Neue",Helvetica,Arial,sans-serif;
+    color: #3B3B48;
+    text-transform: uppercase;
+    border-bottom: 2px solid transparent;
+    font-weight: bold;
+}
+
+
+.footer {
+    bottom: 0;
+    height: 22px;
+    margin-bottom: 28px;
+    margin-top: 28px;
+    position: absolute;
+    width: 100%;
+}
+
+.footer .footer-header {
+    position: absolute;
+    left: 0;
+    margin-left: 86px;
+    width: 262px;
+}
+
+.footer .footer-header .footer-header-img {
+    width: 82px;
+    float: left;
+}
+
+h1, h2, a {
+    color: #3B3B48;
+}
+#footer-pricepls-logo {
+    content: url("");
+    height: 20px;
+}
+
+.footer .footer-header .all-rights {
+    color: #3B3B48;
+    vertical-align: bottom;
+    font-family: "BentonSans-Regular","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 12px;
+    position: absolute;
+    bottom: 0;
+    left: 110px;
+}
+
+.footer .footer-links {
+    position: absolute;
+    right: 0;
+    margin-right: 86px;
+}
+.footer .footer-links ul {
+    margin: 0;
+}
+.footer .footer-links li a {
+    vertical-align: bottom;
+    padding: 0 20px;
+    font-size: 11px;
+    font-family: "BentonSans-Medium","Helvetica Neue",Helvetica,Arial,sans-serif;
+    color: #3B3B48;
+    text-transform: uppercase;
+    line-height: 170%;
+}
+
+article, aside, details, figcaption, figure, footer, header, nav, section, summary {
+    display: block;
+}
+menu, ol, ul {
+    padding: 0 0 0 40px;
+}
+.footer .footer-links li {
+    display: inline;
+}
+.footer .footer-header .footer-header-img {
+    width: 82px;
+    float: left;
+}
+img {
+    vertical-align: middle;
+}
+form {
+    margin: 0;
+}
+
+.row.main-row {
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 30px;
+    border-bottom: 1px solid;
+    border-color: #e8e8e8;
+
+}
+
+#welcome-message{
+
+    height: 200px;
+    /*background-color: #3B3B48;*/
+}
+#invite-box{
+    height: 100px;
+    /*background-color: darkgray;*/
+    clear: both;
+}
+
+.invite-email{
+
+    max-width: 486px;
+    padding-top: 40px;
+    padding-bottom: 0;
+    padding-left: 30px;
+    padding-right: 30px;
+    margin: auto;
+
+}
+
+#emailForUser {
+    height: 100%;
+    padding: 19px 16px;
+    width: 100%;
+}
+.invite-email form {
+    height: 58px;
+    border: 1px solid;
+    border-radius: 29px;
+    border-color: #CCC;
+}
+
+.form-control {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    color: #555;
+    font-family: "BentonSans-Medium","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    padding: 0;
+}
+.invite-email .btn.btn-default.disabled {
+    color: #999;
+    background-color: transparent;
+    opacity: 1;
+    border-left: 1px solid;
+    border-left-color: #CCC;
+}
+
+
+.invite-email .btn.btn-default {
+    background: transparent;
+    background-color: #54BE66;
+    border: none;
+    border-radius: 0 28px 28px 0;
+    color: #FFF;
+    float: right;
+    font-family: "BentonSans-Bold","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 11px;
+    height: 58px;
+    line-height: 18px;
+    margin-right: -16px;
+    margin-top: -1px;
+    text-transform: uppercase;
+    vertical-align: bottom;
+    width: 115px;
+    -webkit-transition: background-color .5s ease;
+    -moz-transition: background-color .5s ease;
+    -ms-transition: background-color .5s ease;
+    -o-transition: background-color .5s ease;
+    transition: background-color .5s ease;
+}
+
+.menu-layout{
+
+    width: 20%;
+    float: left;
+    border: 1px solid #DDDDDD;
+}
+.main-container {
+    width: 80%;
+    float: right;
+    border: 1px solid #DDDDDD;
+}
+
+.h3{
+    margin: 0 10px 0 10px;
+}
+
+.big-message {
+    color: #3B3B48;
+    font-family: "BentonSans-Bold", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 56px;
+    line-height: 78px;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.small-message {
+
+    color: #3B3B48;
+    font-family: "BentonSans-Thin","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 21px;
+    letter-spacing: .5px;
+    line-height: 32px;
+    margin-top: 0;
+    padding-top: 5px;
+    text-align: center;
+    width: 516px;
+    margin: 0 auto;
+
+
+}

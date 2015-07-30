@@ -1,0 +1,10 @@
+{
+
+  "messages":{
+
+    "1001" : "Email id is empty",
+    "1002" : "Email id exists already"
+
+  }
+
+}

@@ -1,0 +1,19 @@
+  <!-- Status: Shows if the subscription succeeded or not. -->
+        <div id="loading">
+            <span class="status icon"></span>
+        </div>
+
+        <!-- Header: Your site logo, tagline and project status. -->
+        <header class="row" id="header">
+            <div class="content">
+                <!-- Logo & Tagline: Delete "class="logo"" to remove the logo or upload your own logo to "assets/images". -->
+                <span class="">
+                    <img src='/images/logo.png'>
+                </span>
+            </div>
+
+            <!-- Status: Change the numbers below to reflect your project status. -->
+            <div class="status" style="width: 75%;">
+                <span>75%</span>
+            </div>
+        </header>

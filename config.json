@@ -1,0 +1,44 @@
+{
+  "development":{
+
+    "port":"8080",
+    "servers":{
+      "vendor_api":"localhost:3000"
+    },
+    "mysql":{
+
+      "host":"localhost",
+      "user":"root",
+      "password":"root"
+
+    },
+    "mongo":{
+
+      "host":"localhost",
+      "port":"27017"
+    }
+
+  },
+  "production":{
+
+    "port":"8080",
+    "servers":{
+      "vendor_api":"vendorapi.pricepls.com"
+    },
+    "mysql":{
+
+      "host":"localhost",
+      "user":"root",
+      "password":"root"
+
+    },
+    "mongo":{
+
+      "host":"localhost",
+      "port":"27017"
+    }
+
+
+  }
+
+}
