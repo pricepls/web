@@ -1,19 +1,5 @@
-<footer class="footer">
-    <div class="footer-header">
-        <!--<a href='/'>
-            <img id="footer-pricepls-logo"/>
-        </a>-->
-        <div class="footer-header-img">
-
-        </div>
-        <div class="all-rights hidden-sm">&#169; 2015 All Rights Reserved</div>
-    </div>
+<footer class="row" id="footer">
     <div class="footer-links">
-        <ul>
-            <li><a href="/vendor-new/">	Business</a></li>
-
-            <li><a href="mailto:support@pricepls.com" >Contact us</a></li>
-
-        </ul>
+        <a href="https://mixpanel.com/f/partner"><img src="//cdn.mxpnl.com/site_media/images/partner/badge_blue.png" alt="Mobile Analytics" /></a>
     </div>
 </footer>

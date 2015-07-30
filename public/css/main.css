@@ -352,3 +352,9 @@ Status
     
     display: none;
 }
+
+#footer .footer-links {
+    position: absolute;
+    right: 0;
+    margin-right: 86px
+}
