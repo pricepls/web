@@ -50,6 +50,14 @@ var admin = {
         }
 
     },
+    logout : function(req,res){
+        res.locals.session = req.session;
+        req.session.authenticated = false;
+        req.session.phone = '';
+        res.redirect('/login');
+
+
+    },
     showHome : function(req,res,next){
 
         var results={};

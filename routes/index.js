@@ -14,6 +14,7 @@ router.get('/',home.index);
 router.post('/inviteme',home.sendInvite);
 router.get('/login',admin.login);
 router.post('/login',admin.validateLogin);
+router.get('/logout',admin.logout)
 //router.get('/logout',admin.logout);
 router.get('/admin/home',auth.authenticate,admin.showHome);
 router.get('/admin/users',auth.authenticate,user.showUsers);
