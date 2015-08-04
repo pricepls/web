@@ -1,0 +1,141 @@
+{>db_layout/}
+{<content}
+
+        <div class="page-content">
+
+              <ol class="breadcrumb">
+
+                  <li class=""><a href="/admin/home/">Home</a></li>
+                  <li class=""><a href="/admin/requests/">requests</a></li>
+                  <li class=""><a href="/admin/request/view/?id={request.request_id}">{request.request_id}</a></li>
+
+              </ol>
+
+            <div class="container-fluid">
+                <div data-widget-group="group1" class="ui-sortable">
+
+                     <div class="row">
+
+                        <div class="col-sm-3">
+
+
+                            <div class="list-group list-group-alternate mb-n nav nav-tabs">
+
+
+                                <a href="#tab-about"  role="tab" data-toggle="tab" class="list-group-item"><i class="ti ti-comments"></i>About</a>
+                                <a href="#tab-vendors"  role="tab" data-toggle="tab" class="list-group-item"><i class="ti ti-comments"></i>Notified Vendors</a>
+
+
+                            </div>
+
+
+                        </div>
+
+                        <div class="col-sm-9">
+
+                            <div class="tab-content">
+
+                                <div class="tab-pane active" id="tab-about">
+                                    <div class="panel panel-default">
+
+                                        <div class="panel-heading"><h2>About</h2></div>
+
+                                        <div class="panel-body">
+
+                                            <div class="about-area">
+
+                                                <div class="table-responsive">
+
+                                                    <table class="table">
+
+                                                            <tbody>
+
+                                                                <tr><th>Request Id</th><td>{request.request_id}</td></tr>
+                                                                <tr><th>User ID</th><td>{request.user_id}</td></tr>
+                                                                <tr><th>User Name</th><td>{request.user_details.name}</td></tr>
+                                                                <tr><th>User Phone</th><td>{request.user_details.phone}</td></tr>
+                                                                <tr><th>User Email</th><td>{request.user_details.email}</td></tr>
+
+                                                                <tr><th>City</th><td>{request.city}</td></tr>
+                                                                <tr><th>Guests</th><td>{request.no_of_guests}</td></tr>
+                                                                <tr><th>Nights</th><td>{request.no_of_nights}</td></tr>
+                                                                <tr><th>Origin City</th><td>{request.origin_city}</td></tr>
+                                                                <tr><th>Posted Date</th><td>{request.posted_on}</td></tr>
+                                                                <tr><th>Demanded Date</th><td>{request.demanded_for}</td></tr>
+
+
+                                                            </tbody>
+
+                                                    </table>
+
+                                                </div>
+
+
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="tab-pane" id="tab-vendors">
+
+
+                                    <div class="panel panel-default">
+
+
+                                        <div class="panel-heading"><h2>Notified Vendors</h2></div>
+                                        <div class="panel-body">
+
+                                            <div class="table-responsive">
+
+                                                <table class="table">
+
+                                                    <thead><tr><th>ID</th><th>Name</th><th>Contact No</th><th>listing</th><th>PP Quotes</th></tr></thead>
+                                                    <tbody>
+
+                                                        {#request.notified_vendors}
+
+                                                            <tr>
+                                                                <td>{vendor_id}</td>
+                                                                <td>{vendor_name}</td>
+                                                                <td>{vendor_contact_no}</td>
+                                                                <td><a href="/admin/vendor/view/?id={vendor_id}">{listing_id}</td>
+                                                                <td>
+                                                                  {#pp_quotes}
+
+                                                                   <p>{room_type} {price} &nbsp;  <span class="badge badge-primary">{pp_price} </span> &nbsp; <span class="badge badge-danger">{discount} &nbsp; % </span></p>
+                                                                  {/pp_quotes}
+                                                            </tr>
+                                                        {/request.notified_vendors}
+
+                                                    </tbody>
+
+                                                </table>
+
+                                            </div>
+
+                                        </div>
+
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+
+                        </div>
+
+
+                     </div>
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+{/content}

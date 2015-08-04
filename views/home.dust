@@ -1,55 +1,76 @@
-{>layout/}
+{>db_layout/}
 {<content}
 
-<div class="menu-layout">
-    {>"inc/side_menu"/}
 
-</div>
-<div class="container-fluid main-container">
 
-     <div class="jumbotron">
-         <div class="row">   <h3>Todays stats</h3> </div>
-         <div class="row stats-row">
+    <div class="page-content">
 
-            <div class="col-md-6">
-                <h4>Requests </h4>
-                <div class="">
-                   {bookings_today}
+          <ol class="breadcrumb">
+
+              <li class=""><a href="/admin/home">Home</a></li>
+
+          </ol>
+
+          <div class="container-fluid">
+
+                <div class="row">
+
+                    <div class="col-md-3">
+
+                        <div class="info-tile tile-orange" style="visibility: visible; opacity: 1; display: block; transform: translateY(0px);" >
+
+                            <div class="tile-icon"><i class="ti ti-bar-chart"></i></div>
+                            <div class="tile-heading">Bookings</div>
+                            <div class="tile-body"><span>{bookings_today}</span></div>
+                            <div class="tile-footer"></div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="col-md-3">
+
+                            <div class="info-tile tile-orange" style="visibility: visible; opacity: 1; display: block; transform: translateY(0px);" >
+
+                                <div class="tile-icon"><i class="ti ti-user"></i></div>
+                                <div class="tile-heading">Users</div>
+                                <div class="tile-body"><span>{users_today}</span></div>
+                                <div class="tile-footer"></div>
+
+                            </div>
+
+                    </div>
+                     <div class="col-md-3">
+
+                            <div class="info-tile tile-orange" style="visibility: visible; opacity: 1; display: block; transform: translateY(0px);" >
+
+                                <div class="tile-icon"><i class="ti ti-view-list "></i></div>
+                                <div class="tile-heading">Listings</div>
+                                <div class="tile-body"><span>{listings_today}</span></div>
+                                <div class="tile-footer"></div>
+
+                            </div>
+
+                    </div>
+
+                     <div class="col-md-3">
+
+                            <div class="info-tile tile-orange" style="visibility: visible; opacity: 1; display: block; transform: translateY(0px);" >
+
+                                <div class="tile-icon"><i class="ti ti-comments"></i></div>
+                                <div class="tile-heading">Requests</div>
+                                <div class="tile-body"><span>{requests_today}</span></div>
+                                <div class="tile-footer"></div>
+
+                            </div>
+
+                    </div>
+
                 </div>
-            </div>
-            <div class="col-md-6">
-                <h4>Listings</h4>
-                <div class="">
-                {listings_today}
-                </div>
-            </div>
-
-         </div>
-         <div class="row stats-row">
-
-              <div class="col-md-6">
-                   <h4>Vendors</h4>
-                   <div class="">{vendors_today}</div>
-              </div>
-              <div class="col-md-6">
-                    <h4>Bookings</h4>
-                    <div class="">{bookings_today}</div>
-              </div>
-
-         </div>
-         <div class="row stats-row">
-
-                       <div class="col-md-6">
-                            <h4>Users</h4>
-                            <div class="">{users_today}</div>
-                       </div>
-
-         </div>
-     </div>
+          </div>
 
 
 
-</div>
-
+    </div>
 
 {/content}

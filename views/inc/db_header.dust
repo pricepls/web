@@ -1,0 +1,33 @@
+<header id="topnav" class="navbar  navbar-fixed-top navbar-bluegray" role="banner">
+
+	<!-- logo-area -->
+
+	<div class="logo-area">
+		<span id="trigger-sidebar" class="toolbar-trigger toolbar-icon-bg">
+			<a data-toggle="tooltips" data-placement="right" title="Toggle Sidebar">
+				<span class="icon-bg">
+					<i class="ti ti-menu"></i>
+				</span>
+			</a>
+		</span>
+
+		<a class="navbar-brand" href="/admin/home">Avenxo</a>
+
+	</div>
+
+	<!-- logo-area -->
+
+	<ul class="nav navbar-nav toolbar pull-right">
+
+		<li class="dropdown toolbar-icon-bg">
+			<a href="#" class="dropdown-toggle username" data-toggle="dropdown">
+				<img class="img-circle" src="/assets/img/admin_user_icon.png" alt="" />
+			</a>
+			<ul class="dropdown-menu userinfo arrow">
+				<!--<li><a href="#/"><i class="ti ti-user"></i><span>Profile</span></li>
+				<li class="divider"></li> -->
+				<li><a href="/admin/logout"><i class="ti ti-shift-right"></i><span>Sign Out</span></a></li>
+			</ul>
+		</li>
+	</ul>
+</header>

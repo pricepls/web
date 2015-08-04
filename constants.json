@@ -3,7 +3,17 @@
   "messages":{
 
     "1001" : "Email id is empty",
-    "1002" : "Email id exists already"
+    "1002" : "Email id exists already",
+    "1003" : "Please enter you details",
+    "1004" : "uh Oh ! as far as we know you dont exist",
+    "1005" : "Session expired , Please log in",
+    "1006" : "No users data to display"
+
+
+  },
+  "settings":{
+
+    "per_page":10
 
   }
 

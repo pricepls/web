@@ -1,34 +1,29 @@
 {>layout/}
 {<content}
-	<div class='container' id='content'>
-		{#message}
-		<div class="alert fade in alert-{type}">
-			<button class="close" data-dismiss="alert">&times;</button>
-			{desc}
+
+	<div class="row">
+		<div class="login">
+		  <div class="heading">
+			<h2>Sign in</h2>
+			{#message}
+			<div class="error-msg">
+				{message}
+			</div>
+			{/message}
+			<form action="/login" method="post">
+					<div class="input-group input-group-lg">
+						<span class="input-group-addon"><i class="fa fa-user"></i></span>
+						<input type="text" name="phone" class="form-control" placeholder="Phone">
+					</div>
+					<div class="input-group input-group-lg">
+						<span class="input-group-addon"><i class="fa fa-lock"></i></span>
+						<input type="password" name="password" class="form-control" placeholder="Password">
+					</div>
+
+					<button type="submit" class="float">Login</button>
+			</form>
 		</div>
-		{/message}
-		<h2>Sign in</h2>
-		<form accept-charset="UTF-8" action="login"
-			class="simple_form form-horizontal new_user" id="new_user"
-			method="post" novalidate="novalidate">
-			<div class="control-group email optional">
-				<label class="email optional control-label" for="user_email">Email</label>
-				<div class="controls">
-					<input autofocus="autofocus" class="string email optional"
-						id="user_phone" name="user[phone]" size="50" type="phone" value="" placeholder="phone number"/>
-				</div>
-			</div>
-			<div class="control-group password optional">
-				<label class="password optional control-label" for="user_password">Password</label>
-				<div class="controls">
-					<input class="password optional" id="user_password"
-						name="user[password]" size="50" type="password" />
-				</div>
-			</div>
-			<div class='form-actions'>
-				<input class="btn btn btn-primary" name="commit" type="submit"
-					value="Sign in" />
-			</div>
-		</form>
-	</div>
+	   </div>
+   </div>
+
 {/content}

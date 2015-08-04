@@ -1,0 +1,57 @@
+{>db_layout/}
+{<content}
+
+        <div class="page-content">
+
+              <ol class="breadcrumb">
+
+                  <li class=""><a href="/admin/home">Home</a></li>
+                  <li class=""><a href="/admin/requests">requests</a></li>
+
+              </ol>
+
+              <div class="container-fluid">
+
+                    <div class="row">
+
+                        <div class="col-xs-12">
+
+                            <div class="panel panel-default">
+
+                                    <div class="panel-heading"><h2>Requests</h2></div>
+                                    <div class="panel-body">
+
+                                            <table class="table">
+
+                                               <thead><tr><th>ID</th><th>user</th><th>posted on</th><th>status</th></tr></thead>
+
+                                                <tbody class="table-hover">
+
+                                                    {#requests}
+
+                                                        <tr>
+
+                                                            <td><a href="/admin/request/view?id={id}">{id}</a></td>
+                                                            <td><a href="/admin/user/view?id={userid}">{username}</a></td>
+                                                            <td>{posted_on}</td>
+                                                            <td>{status}</td>
+
+
+                                                        </tr>
+
+                                                    {/requests}
+
+                                                </tbody>
+
+                                            </table>
+
+                                    </div>
+
+                            </div>
+
+                        </div>
+
+                   </div>
+              </div>
+
+{/content}

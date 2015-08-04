@@ -1,0 +1,144 @@
+{>db_layout/}
+{<content}
+
+        <div class="page-content">
+
+              <ol class="breadcrumb">
+
+                  <li class=""><a href="/admin/home">Home</a></li>
+                  <li class=""><a href="/admin/users">users</a></li>
+                  <li class=""><a href="/admin/user/view/?id={user.user_id}">{user.name}</a></li>
+
+              </ol>
+
+              <div class="container-fluid">
+
+                    <div data-widget-group="group1" class="ui-sortable">
+
+                        <div class="row">
+
+                            <div class="col-sm-3">
+
+                                <div class="panel panel-profile" >
+
+                                    <div class="panel-body">
+
+                                        <img src="/assets/img/user_profile_pic.png" class="img-circle">
+                                        <div class="name">{user.name}</div>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="list-group list-group-alternate mb-n nav nav-tabs">
+
+                                    <a href="#tab-about"  role="tab" data-toggle="tab" class="list-group-item"><i class="ti ti-user"></i>About</a>
+                                    <a href="#tab-requests"  role="tab" data-toggle="tab" class="list-group-item"><i class="ti ti-comments"></i>Requests</a>
+                                    <a href="#tab-bookings"  role="tab" data-toggle="tab" class="list-group-item"><i class="ti ti-bar-chart"></i>Bookings</a>
+                                    <a href="#tab-reviews"  role="tab" data-toggle="tab" class="list-group-item"><i class="ti ti-comment-alt"></i>Reviews</a>
+
+                                </div>
+
+                            </div>
+
+                            <div class="col-sm-9">
+
+                                <div class="tab-content">
+
+                                    <div class="tab-pane active" id="tab-about">
+
+                                            <div class="panel panel-default">
+
+
+                                                    <div class="panel-heading"><h2>About</h2></div>
+                                                    <div class="panel-body">
+
+                                                        <div class="about-area">
+
+                                                            <div class="table-responsive">
+
+                                                                <table class="table">
+
+                                                                        <tbody>
+
+                                                                            <tr><th>User Id</th><td>{user.user_id}</td></tr>
+                                                                            <tr><th>Name</th><td>{user.name}</td></tr>
+                                                                            <tr><th>Phone</th><td>{user.phone}</td></tr>
+                                                                            <tr><th>Email</th><td>{user.email}</td></tr>
+                                                                            <tr><th>Status</th><td>{user.status}</td></tr>
+                                                                            <tr><th>City</th><td>{user.city}</td></tr>
+                                                                            <tr><th>Country</th><td>{user.country}</td></tr>
+                                                                            <tr><th>Requests</th><td>{user.requests}</td></tr>
+                                                                            <tr><th>Bookings</th><td>{user.bookings}</td></tr>
+                                                                            <tr><th>Joined Date</th><td>{user.created_date}</td></tr>
+
+                                                                        </tbody>
+
+                                                                </table>
+
+                                                            </div>
+
+                                                        </div>
+
+                                                    </div>
+
+                                            </div>
+
+                                    </div>
+
+
+                                    <div class="tab-pane" id="tab-requests">
+
+
+                                        <div class="panel panel-default">
+
+
+                                            <div class="panel-heading"><h2>Requests</h2></div>
+                                            <div class="panel-body">
+
+                                                <div class="table-responsive">
+
+                                                    <table class="table m-n">
+
+                                                        <thead><tr><th>#</th><th>ID</th><th>Posted On</th></tr></thead>
+                                                        <tbody>
+
+                                                            {#requests}
+
+                                                                <tr>
+                                                                    <td></td>
+                                                                    <td><a href="/admin/request/view/?id={id}">{id}</td>
+                                                                    <td>{posted_on}</td>
+
+                                                                </tr>
+
+                                                            {/requests}
+
+                                                        </tbody>
+
+                                                    </table>
+
+                                                </div>
+
+                                            </div>
+
+
+                                        </div>
+
+                                    </div>
+
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+              </div>
+
+
+
+        </div>
+{/content}

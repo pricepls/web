@@ -1,9 +1,14 @@
 var express = require('express');
 var admin = express.Router();
-var reqLib = require('../lib/request');
 var configs=app.get('configs');
 var vendorapi = configs.servers.vendor_api;
 
+var constants = app.get('constants');
+var md5=require('MD5');
+var mysqlDB = require('../lib/mysqldb')();
+mysqlDB.init();
+var mongo=require('../lib/mongodb');
+var async = require('async');
 var admin = {
 
 
@@ -15,25 +20,32 @@ var admin = {
     },
     validateLogin : function(req,res,next){
 
-        var user = req.body.user || undefined;
+        var session = req.session;
+        var phone = req.body.phone || undefined;
+        var password = req.body.password || undefined;
         var result = {};
-        if(user !== undefined){
+        if(phone !== undefined || password !== undefined){
+            password=md5(password);
+            mysqlDB.findAdmin(phone,password,function(err,admin){
+                if(err)
+                    next();
+                else{
+                    if(admin!==undefined){
+                        res.locals.session = req.session;
+                        req.session.authenticated = true;
+                        req.session.phone = phone;
+                        res.redirect('/admin/home');
+                    }else{
+                        req.flash('error',{message:constants.messages['1005']});
+                        res.render('signin',data);
+                    }
 
-            var url = vendorapi+'/admin/login';
-            var data ='phone='+user.phone+'&password='+user.password;
-            reqLib.makePostRequest(url,data,function(err,data){
-
-                if(err){
-                    result.message="Login failed";
-                    res.render('signin',result);
-                }else{
-                    res.redirect('/admin/home/');
                 }
             });
-
         }else{
 
-            data.message="";
+            var data ={};
+            data.message=constants.messages['1003'];
             res.render('signin',data);
         }
 
@@ -46,24 +58,63 @@ var admin = {
         results.vendors_today=0;
         results.requests_today=0;
         results.users_today=0;
-        var url = vendorapi+'/admin/getstatus';
-        reqLib.makeGetRequest(url,null,function(err,data){
+
+        var curdate= new Date();
+        //curdate=curdate.setHours(0,0,0,0);
+        //curdate=curdate.setTime();
+        async.parallel([
+            function(callback) {
+                mysqlDB.getVendorsCount(function(err,count){
+                    if(err)
+                        return callback(err);
+                    else
+                        results.vendors_today=count;
+                    callback();
+                });
+            },
+            function(callback) {
+                mysqlDB.getUsersCount(function(err,count){
+                    if(err)
+                        return callback(err);
+                    else
+                        results.users_today=count;
+                    callback();
+                });
+            },
+            function(callback) {
+                var query={
+                    'created_date':{$gte:curdate}
+                }
+                mongo.getlistingCount(query,function(err,count){
+                    if(err)
+                        return callback(err);
+                    else
+                        results.listings_today=count;
+                    callback();
+                });
+            },
+            function(callback) {
+                var query={
+                    'created_date':{$gte:curdate}
+                }
+                mongo.getBookingCount(query,function(err,count){
+                    if(err)
+                        return callback(err);
+                    else
+                        results.bookings_today=count;
+                    callback();
+                });
+            }
+        ], function(err) {
 
             if(err){
-                results.message="Login failed";
-                res.redirect('/signin',results);
+                next(err);
             }else{
-                var resData = JSON.parse(data);
-                if(resData.status){
 
-                    results.bookings_today=resData.bookings;
-                    results.listings_today=resData.listings;
-                    results.vendors_today=resData.vendors;
-                    results.requests_today=resData.requests;
-                    results.users_today=resData.users;
-                }
-                res.render('home',results);
+               res.render('home',results);
+
             }
+
         });
 
     },

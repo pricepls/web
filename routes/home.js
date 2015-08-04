@@ -8,12 +8,13 @@ var constants = app.get('constants');
 var home ={
 
     index : function(req,res,next){
-
+        res.locals.session = req.session;
         var data ={};
         res.render('index',data);
 
     },
     sendInvite : function(req,res,next){
+        res.locals.session = req.session;
 
         var response = {
             status: "",

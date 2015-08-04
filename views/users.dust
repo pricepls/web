@@ -1,0 +1,59 @@
+{>db_layout/}
+{<content}
+
+        <div class="page-content">
+
+              <ol class="breadcrumb">
+
+                  <li class=""><a href="/admin/home">Home</a></li>
+                  <li class=""><a href="/admin/users">users</a></li>
+
+              </ol>
+
+              <div class="container-fluid">
+
+                    <div class="row">
+
+                        <div class="col-xs-12">
+
+                            <div class="panel panel-default">
+
+                                    <div class="panel-heading"><h2>Users</h2></div>
+                                    <div class="panel-body">
+
+                                            <table class="table">
+
+                                               <thead><tr><th>UserID</th><th>Name</th><th>Email</th><th>Phone</th><th>Joined Date</th><th>Status</th></tr></thead>
+
+                                                <tbody class="table-hover">
+
+                                                    {#users}
+
+                                                        <tr>
+
+                                                            <td>{id}</td>
+                                                            <td><a href="/admin/user/view?id={id}">{name}</a></td>
+                                                            <td>{email}</td>
+                                                            <td>{phone}</td>
+                                                            <td>{signed_up_on}</td>
+                                                            <td>{status}</td>
+
+
+                                                        </tr>
+
+                                                    {/users}
+
+                                                </tbody>
+
+                                            </table>
+
+                                    </div>
+
+                            </div>
+
+                        </div>
+
+                   </div>
+              </div>
+
+{/content}

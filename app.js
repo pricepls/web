@@ -4,18 +4,23 @@ var express=require('express'),
     path  = require('path'),
     dust = require('dustjs-linkedin'),
     cons = require('consolidate');
-
+    session = require('express-session');
+    flash = require('simple-flash');
+    uuid = require('uuid');
 
 app=express();
 var template_engine = 'dust';
 app.use(logger('dev'));
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded());
+app.use(bodyParser.urlencoded({extended:true}));
 app.engine('dust', cons.dust);
 app.set('template_engine', template_engine);
 app.set('views', __dirname + '/views');
 app.set('view engine', template_engine);
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(flash());
+
+app.use(session({genid: function(req) { return uuid.v4();},resave: false,saveUninitialized:false,secret: 'price@pl$',maxAge: 1*1000}));
 
 var configFile= require('./config.json');
 
