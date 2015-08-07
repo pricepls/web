@@ -8,11 +8,14 @@ var express=require('express'),
     flash = require('simple-flash');
     uuid = require('uuid');
 
+
 app=express();
 var template_engine = 'dust';
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:true}));
+
+
 app.engine('dust', cons.dust);
 app.set('template_engine', template_engine);
 app.set('views', __dirname + '/views');
@@ -60,12 +63,15 @@ if (app.get('env') === 'development') {
 // production error handler
 // no stacktraces leaked to user
 app.use(function(err, req, res, next) {
-    res.status(err.status || 500);
-    res.json({
-        status:'error',
-        message: err.message,
-        error: {}
-    });
+
+    if(err.status && err.status != 500){
+        res.status(err.status);
+        res.render('404','');
+    }else{
+        res.status(err.status || 500);
+        res.render('500','');
+    }
+
 });
 
 var port = 8080;

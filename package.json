@@ -23,7 +23,11 @@
     "uuid":"2.0.1",
     "fancy-timestamp":"1.0.1",
     "little-time": "0.0.1",
-    "simple-paging":"1.2.1"
+    "simple-paging":"1.2.1",
+    "chance":"0.7.6",
+    "cloudinary":"1.2.2",
+    "shortid":"2.2.2",
+    "multer":"1.0.1"
   },
   "private":true
 }

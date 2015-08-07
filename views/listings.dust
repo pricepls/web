@@ -1,70 +1,67 @@
 {>db_layout/}
 {<content}
 
-    <div class="row">
+        <div class="page-content">
 
-        <div class="col-lg-12">
+              <ol class="breadcrumb">
 
-            <div class="widget">
+                  <li class=""><a href="/admin/home">Home</a></li>
+                  <li class=""><a href="/admin/listings">listings</a></li>
 
-                <div class="widget-header">
+              </ol>
+
+              <div class="container-fluid">
 
                     <div class="row">
 
-                        <div class="pull-left"><i class="fa fa-sitemap"></i> Listings </div>
-                        <div class="pull-right"><a href="/admin/vendor/new"><i class="fa fa-add"></i>NEW</div>
+                        <div class="col-xs-12">
 
-                    </div>
-                </div>
+                            <div class="panel panel-default">
 
-                <div class="widget-body large no-padding">
-                        {#message}
-                            <div class="error-msg">
-                                {message}
+                                    <div class="panel-heading">
+                                        <h2>Listings</h2>
+                                        <div class="panel-ctrls">
+                                            <span class="button-icon has-bg">
+                                                <a  href="/admin/vendor/new/"><i class="ti ti-plus"></i></a>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="panel-body">
+
+                                            <table class="table">
+
+                                               <thead><tr><th>ID</th><th>Listing ID</th><th>Name</th><th>Phone</th><th>Contact</th><th>Joined Date</th><th>Status</th></tr></thead>
+
+                                                <tbody class="table-hover">
+
+                                                    {#vendors}
+
+                                                        <tr>
+
+                                                            <td>{id}</td>
+                                                            <td><a href="/admin/vendor/view?id={id}">{listing_id}</a></td>
+                                                            <td><a href="/admin/vendor/view?id={id}">{name}</a></td>
+                                                            <td>{phone}</td>
+                                                            <td>{contact}</td>
+                                                            <td>{signed_up_on}</td>
+                                                            <td>{status}</td>
+
+
+                                                        </tr>
+
+                                                    {/vendors}
+
+                                                </tbody>
+
+                                            </table>
+
+                                    </div>
+
                             </div>
-                        {/message}
-
-                        <div class="widget-content">
-
-                            <table class="table">
-
-                               <thead><tr><th>ID</th><th>Name</th><th>Contact No</th><th>Phone</th><th>Joined Date</th><th>Status</th></tr></thead>
-
-                                <tbody>
-
-                                    {#vendors}
-                                        <tr>
-                                            <td>{id}</td>
-                                            <td><a href="/admin/vendor/view?id={id}">{name}</a></td>
-                                            <td>{contact}</td>
-                                            <td>{phone}</td>
-                                            <td>{signed_up_on}</td>
-                                            <td>{status}</td>
-                                        </tr>
-                                    {/vendors}
-
-                                </tbody>
-
-                            </table>
 
                         </div>
-                </div>
-                <div class="widget-footer">
 
-                    <ul class="pagination pagination-sm pull-right">
-
-                            {#page_data.pages}
-                                <li><a href="{pages.url}">{pages.id}</a></li>
-                            {/page_data.pages}
-
-
-
-                    <ul>
-
-                </div>
-
-            </div>
-        </div>
-    </div>
+                   </div>
+              </div>
 
 {/content}

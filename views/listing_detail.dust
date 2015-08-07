@@ -22,6 +22,7 @@
                                 <div class="list-group list-group-alternate mb-n nav nav-tabs">
 
                                     <a href="#tab-about"  role="tab" data-toggle="tab" class="list-group-item"><i class="ti ti-user"></i>About</a>
+                                    <a href="#tab-images"  role="tab" data-toggle="tab" class="list-group-item"><i class="ti ti-user"></i>Images</a>
                                     <a href="#tab-requests"  role="tab" data-toggle="tab" class="list-group-item"><i class="ti ti-comments"></i>Requests</a>
                                     <a href="#tab-bookings"  role="tab" data-toggle="tab" class="list-group-item"><i class="ti ti-bar-chart"></i>Bookings</a>
                                     <a href="#tab-reviews"  role="tab" data-toggle="tab" class="list-group-item"><i class="ti ti-comment-alt"></i>Reviews</a>
@@ -75,6 +76,86 @@
                                             </div>
                                     </div>
 
+                                    <div class="tab-pane" id="tab-bookings">
+
+
+                                        <div class="panel panel-default">
+
+
+                                            <div class="panel-heading"><h2>Bookings</h2></div>
+                                            <div class="panel-body">
+
+                                                <div class="table-responsive">
+
+                                                    <table class="table m-n">
+
+                                                        <thead><tr><th>ID</th><th>Request ID</th><th>User</th><th>Booked on</tr></thead>
+                                                        <tbody>
+
+                                                            {#bookings}
+
+                                                                <tr>
+                                                                    <td><a href="/admin/booking/view?id={booking_id}">{booking_id}</a></td>
+                                                                    <td><a href="/admin/request/view/?id={request_id}">{request_id}</td>
+                                                                    <td><a href="/admin/user/view/?id={user_id}">{user_details.name}</a></td>
+                                                                    <td>{created_at}</td>
+
+                                                                </tr>
+
+                                                            {/bookings}
+
+                                                        </tbody>
+
+                                                    </table>
+
+                                                </div>
+
+                                            </div>
+
+
+                                        </div>
+
+                                    </div>
+
+                                    <div class="tab-pane" id="tab-requests">
+
+
+                                        <div class="panel panel-default">
+
+
+                                            <div class="panel-heading"><h2>Request</h2></div>
+                                            <div class="panel-body">
+
+                                                <div class="table-responsive">
+
+                                                    <table class="table m-n">
+
+                                                        <thead><tr><th>Request ID</th><th>User</th><th>Posted on</tr></thead>
+                                                        <tbody>
+
+                                                            {#requests}
+
+                                                                <tr>
+                                                                    <td><a href="/admin/request/view/?id={request_id}">{request_id}</td>
+                                                                    <td><a href="/admin/user/view/?id={user_id}">{user_details.name}</a></td>
+                                                                    <td>{created_at}</td>
+
+                                                                </tr>
+
+                                                            {/requests}
+
+                                                        </tbody>
+
+                                                    </table>
+
+                                                </div>
+
+                                            </div>
+
+
+                                        </div>
+
+                                    </div>
 
                                 </div>
 

@@ -6,7 +6,7 @@ var booking = {
 
 
 
-        res.render('users','');
+        res.render('bookings','');
 
     }
 

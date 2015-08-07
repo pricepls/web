@@ -1,28 +1,59 @@
 {>db_layout/}
 {<content}
 
-    <div class="row">
+        <div class="page-content">
 
-        <div class="col-lg-12">
+              <ol class="breadcrumb">
 
-            <div class="widget">
+                  <li class=""><a href="/admin/home">Home</a></li>
+                  <li class=""><a href="/admin/bookings">bookings</a></li>
 
-                <div class="widget-header">
+              </ol>
+
+              <div class="container-fluid">
 
                     <div class="row">
 
-                        <div class="pull-left ng-binding"><i class="fa fa-users" ng-class="icon"></i> Users </div>
+                        <div class="col-xs-12">
 
-                    </div>
-                </div>
+                            <div class="panel panel-default">
 
-                <div class="widget-body large no-padding">
+                                    <div class="panel-heading"><h2>Bookings</h2></div>
+                                    <div class="panel-body">
+
+                                            <table class="table">
+
+                                               <thead><tr><th>Booking ID</th><th>Request ID</th><th>Name</th><th>Email</th><th>Phone</th><th>Booked on</th><th>Booked for</th><th>status</th></tr></thead>
+
+                                                <tbody class="table-hover">
+
+                                                    {#users}
+
+                                                        <tr>
+
+                                                            <td>{id}</td>
+                                                            <td><a href="/admin/user/view?id={id}">{name}</a></td>
+                                                            <td>{email}</td>
+                                                            <td>{phone}</td>
+                                                            <td>{signed_up_on}</td>
+                                                            <td>{status}</td>
 
 
-                </div>
+                                                        </tr>
 
-            </div>
-        </div>
-    </div>
+                                                    {/users}
+
+                                                </tbody>
+
+                                            </table>
+
+                                    </div>
+
+                            </div>
+
+                        </div>
+
+                   </div>
+              </div>
 
 {/content}

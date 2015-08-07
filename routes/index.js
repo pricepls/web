@@ -1,6 +1,7 @@
 var express=require('express');
 var router=express.Router();
-
+var multer  = require('multer');
+var upload = multer({ dest: 'uploads/' });
 
 var admin=require('./admin.js');
 var home = require('./home.js');
@@ -29,8 +30,10 @@ router.get('/admin/requests',auth.authenticate,request.showRequests);
 router.get('/admin/user/view',auth.authenticate,user.viewUser);
 router.get('/admin/request/view',auth.authenticate,request.viewRequest);
 router.get('/admin/vendor/view',auth.authenticate,listing.viewVendor);
+router.get('/admin/vendor/new',/*auth.authenticate,*/listing.newVendor);
+router.post('/admin/vendor/new',/*auth.authenticate,*/upload.array('image',8),listing.validateVendor);
+//router.get('/admin/booking/view','');
 
-//router.get('/admin/vendor/new',listing.newVendor);
 //router.post('/admin/vendor/new',listing.createVendor);
 
 //router.get('/admin/listing/view/all',listing.viewAllListings);
