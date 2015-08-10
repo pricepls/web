@@ -6,6 +6,7 @@ var upload = multer({ dest: 'uploads/' });
 var admin=require('./admin.js');
 var home = require('./home.js');
 var user = require('./user.js');
+var settings = require('./settings.js');
 var request = require('./request.js');
 var listing = require('./listing.js');
 var booking = require('./booking.js');
@@ -15,18 +16,28 @@ router.get('/',home.index);
 router.post('/inviteme',home.sendInvite);
 router.get('/login',admin.login);
 router.post('/login',admin.validateLogin);
-router.get('/logout',admin.logout)
+router.get('/logout',admin.logout);
+router.get('/admin/new/',admin.new);
+router.post('/admin/new/',admin.validateAdmin);
+
+
 //router.get('/logout',admin.logout);
 router.get('/admin/home',auth.authenticate,admin.showHome);
 router.get('/admin/users',auth.authenticate,user.showUsers);
 router.get('/admin/listings',auth.authenticate,listing.showListings);
 router.get('/admin/bookings',auth.authenticate,booking.showBookings);
 router.get('/admin/requests',auth.authenticate,request.showRequests);
+router.get('/admin/settings',auth.authenticate,settings.showAllsettings);
+router.get('/admin/city/new/',settings.city_new);
+router.post('/admin/city/new/',settings.validateCity);
+router.get('/admin/amenities/new/',settings.amenity_new);
+router.post('/admin/amenities/new/',settings.validateAmenity);
 
 
 //router.get('/admin/request/view/all',request.viewAllRequests);
 //router.get('/admin/request/view',user.viewRequest);
 //router.get('/admin/user/view/all',user.viewAllUsers);
+
 router.get('/admin/user/view',auth.authenticate,user.viewUser);
 router.get('/admin/request/view',auth.authenticate,request.viewRequest);
 router.get('/admin/vendor/view',auth.authenticate,listing.viewVendor);

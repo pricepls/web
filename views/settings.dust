@@ -1,0 +1,234 @@
+{>db_layout/}
+{<content}
+
+        <div class="page-content">
+
+              <ol class="breadcrumb">
+
+                  <li class=""><a href="/admin/home">Home</a></li>
+                  <li class=""><a href="/admin/settings">settings</a></li>
+
+              </ol>
+
+              <div class="container-fluid">
+
+                    <div class="row">
+
+                        <div class="col-xs-12">
+
+                            <div class="panel panel-default">
+
+                                    <div class="panel-heading"><h2>Admins</h2>
+                                    <div class="panel-ctrls">
+                                        <span class="button-icon has-bg">
+                                            <a  href="/admin/new/"><i class="ti ti-plus"></i></a>
+                                        </span>
+                                    </div>
+                                    </div>
+
+                                    <div class="panel-body">
+
+                                            <table class="table">
+
+                                               <thead><tr><th>UserID</th><th>Name</th><th>Phone</th><th>Status</th></tr></thead>
+
+                                                <tbody class="table-hover">
+
+                                                    {#admins}
+
+                                                        <tr>
+
+                                                            <td>{id}</td>
+                                                            <td>{name}</td>
+                                                            <td>{phone}</td>
+                                                            <td>{status}</td>
+
+
+                                                        </tr>
+
+                                                    {/admins}
+
+                                                </tbody>
+
+                                            </table>
+
+                                    </div>
+
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+                    <div class="row">
+
+                        <div class="col-xs-12">
+
+                            <div class="panel panel-default">
+
+                                    <div class="panel-heading"><h2>Cities</h2>
+                                    <div class="panel-ctrls">
+                                        <span class="button-icon has-bg">
+                                            <a  href="/admin/city/new/"><i class="ti ti-plus"></i></a>
+                                        </span>
+                                    </div>
+                                    </div>
+                                    <div class="panel-body">
+
+                                            <table class="table">
+
+                                               <thead><tr><th>id</th><th>Name</th><th>Country Name</th><th>Status</th></tr></thead>
+
+                                                <tbody class="table-hover">
+
+                                                    {#cities}
+
+                                                        <tr>
+
+                                                            <td>{id}</td>
+                                                            <td>{name}</td>
+                                                            <td>{c_name}</td>
+                                                            <td>{status}</td>
+
+
+                                                        </tr>
+
+                                                    {/cities}
+
+                                                </tbody>
+
+                                            </table>
+
+                                    </div>
+
+                            </div>
+
+                        </div>
+
+
+                    </div>
+                    <div class="row">
+
+                        <div class="col-xs-12">
+
+                            <div class="panel panel-default">
+
+                                    <div class="panel-heading"><h2>Amenities</h2>
+                                    <div class="panel-ctrls">
+                                        <span class="button-icon has-bg">
+                                            <a  href="/admin/amenities/new/"><i class="ti ti-plus"></i></a>
+                                        </span>
+                                    </div>
+                                    </div>
+                                    <div class="panel-body">
+
+                                            <table class="table">
+
+                                               <thead><tr><th>Id</th><th>Name</th></tr></thead>
+
+                                                <tbody class="table-hover">
+
+                                                    {#amenities}
+
+                                                        <tr>
+                                                            <td>{id}</td>
+                                                            <td>{name}</td>
+                                                        </tr>
+
+                                                    {/amenities}
+
+                                                </tbody>
+
+                                            </table>
+
+                                    </div>
+
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+                    <div class="row">
+
+                        <div class="col-xs-12">
+
+                            <div class="panel panel-default">
+
+                                    <div class="panel-heading"><h2>Categories</h2></div>
+                                    <div class="panel-body">
+
+                                            <table class="table">
+
+                                               <thead><tr><th>ID</th><th>Name</th><th>Sub types</th></tr></thead>
+
+                                                <tbody class="table-hover">
+
+                                                    {#categories}
+
+                                                        <tr>
+                                                            <td>{id}</td>
+                                                            <td>{name}</td>
+                                                            <td>{sub_type}</td>
+                                                        </tr>
+
+                                                    {/categories}
+
+                                                </tbody>
+
+                                            </table>
+
+                                    </div>
+
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+                    <div class="row">
+
+                        <div class="col-xs-12">
+
+                            <div class="panel panel-default">
+
+                                    <div class="panel-heading"><h2>Areas</h2></div>
+                                    <div class="panel-body">
+
+                                            <table class="table">
+
+                                               <thead><tr><th>Id</th><th>Name</th><th>City Name</th></tr></thead>
+
+                                                <tbody class="table-hover">
+
+                                                    {#areas}
+
+                                                        <tr>
+
+                                                            <td>{id}</td>
+                                                            <td>{name}</td>
+                                                            <td>{city_id}</td>
+
+                                                        </tr>
+
+                                                    {/areas}
+
+                                                </tbody>
+
+                                            </table>
+
+                                    </div>
+
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+              </div>
+
+{/content}

@@ -1,0 +1,72 @@
+{>db_layout/}
+{<content}
+
+
+   <div class="page-content">
+
+
+           <div class="page-content">
+
+                <ol class="breadcrumb"></ol>
+
+                <div class="row">
+
+                    <div class="container-fluid">
+
+                        <div data-widget-group="group1" class="ui-sortable">
+
+                            <div class="col-md-12">
+
+                                <div class="panel panel-default">
+
+                                    <div class="panel-heading">
+
+                                       <h2>Add new city</h2>
+
+                                    </div>
+
+                                     <div class="panel-body">
+
+                                            <form action="/admin/city/new"  method="post" class="form-horizontal">
+
+                                                <fieldset>
+                                                    <div class="form-group">
+                                                        <label for="fieldemail" class="col-md-3 control-label">Name</label>
+                                                        <div class="col-md-6">
+                                                            <input id="city_name" class="form-control" type="phone" name="city_name" required>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="form-group">
+                                                     <label for="fieldurl" class="col-md-3 control-label">Country</label>
+                                                     <div class="col-md-6">
+                                                        <select name="country_id" >
+                                                             {#countries}
+                                                                    <option value="{id}">{name}</option>
+                                                             {/countries}
+                                                        </select>
+                                                     </div>
+                                                    </div>
+                                                    <input type="submit" class="finish btn-success btn" value="Submit" />
+                                                </fieldset>
+
+                                            </form>
+
+                                     </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+           </div>
+
+   </div>
+
+
+
+
+{/content}

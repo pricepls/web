@@ -27,21 +27,23 @@
 
                                                 <tbody class="table-hover">
 
-                                                    {#users}
+                                                    {#bookings}
 
                                                         <tr>
 
-                                                            <td>{id}</td>
-                                                            <td><a href="/admin/user/view?id={id}">{name}</a></td>
-                                                            <td>{email}</td>
-                                                            <td>{phone}</td>
-                                                            <td>{signed_up_on}</td>
-                                                            <td>{status}</td>
+                                                            <td><a href="/admin/booking/view?id={booking_id}">{booking_id}</a></td>
+                                                            <td><a href="/admin/request/view?id={request_id}">{request_id}</a></td>
+                                                            <td>{user_details.name}</td>
+                                                            <td>{user_details.email}</td>
+                                                            <td>{user_details.phone}</td>
+                                                            <td>{created_on}</td>
+                                                            <td>{requested_for}</td>
+                                                            <td>{payment_status}</td>
 
 
                                                         </tr>
 
-                                                    {/users}
+                                                    {/bookings}
 
                                                 </tbody>
 

@@ -1,0 +1,61 @@
+{>db_layout/}
+{<content}
+
+
+   <div class="page-content">
+
+
+           <div class="page-content">
+
+                <ol class="breadcrumb"></ol>
+
+                <div class="row">
+
+                    <div class="container-fluid">
+
+                        <div data-widget-group="group1" class="ui-sortable">
+
+                            <div class="col-md-12">
+
+                                <div class="panel panel-default">
+
+                                    <div class="panel-heading">
+
+                                       <h2>Add new amenity</h2>
+
+                                    </div>
+
+                                     <div class="panel-body">
+
+                                            <form action="/admin/amenities/new"  method="post" class="form-horizontal">
+
+                                                <fieldset>
+                                                    <div class="form-group">
+                                                        <label for="fieldemail" class="col-md-3 control-label">Name</label>
+                                                        <div class="col-md-6">
+                                                            <input id="name" class="form-control" type="phone" name="name" required>
+                                                        </div>
+                                                    </div>
+                                                <input type="submit" class="finish btn-success btn" value="Submit" />
+                                                </fieldset>
+
+                                            </form>
+
+                                     </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+           </div>
+
+   </div>
+
+
+
+
+{/content}

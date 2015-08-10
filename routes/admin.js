@@ -9,6 +9,9 @@ var mysqlDB = require('../lib/mysqldb')();
 mysqlDB.init();
 var mongo=require('../lib/mongodb');
 var async = require('async');
+var Chance=require('chance');
+var chance = new Chance();
+
 var admin = {
 
 
@@ -132,6 +135,28 @@ var admin = {
         var page = req.query.page || 1;
         var url = vendorapi+'/'
 
+    },
+    new : function(req,res,next){
+
+
+        res.render('admin_new','');
+
+    },
+    validateAdmin:function(req,res,next){
+
+        var phone = req.body.admin_phone || undefined;
+        var name = req.body.admin_name || undefined;
+        if(phone !== undefined && name !== undefined){
+
+            var password = chance.word({length: 6});
+            var encrypted=md5(password);
+            mysqlDB.newAdmin(name,phone,encrypted,function(err,success) {
+
+                if (success) {
+                    res.redirect('/admin/settings');
+                }
+            });
+        }
     }
 
 }

@@ -308,9 +308,10 @@
                                                         </div>
 
                                                  </div>
+                                                 <input type="submit" class="finish btn-success btn" value="Submit" />
+
                                             </fieldset>
 
-                                            <input type="submit" class="finish btn-success btn" value="Submit" />
 
                                         </form>
 
