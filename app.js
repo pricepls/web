@@ -1,3 +1,4 @@
+require('newrelic');
 var express=require('express'),
     bodyParser=require('body-parser'),
     logger=require('morgan'),
@@ -78,5 +79,5 @@ var port = 8080;
 
 
 app.listen(port,function(){
-    console.log("Price pls web application started ");
+    console.log("Price pls web application started on "+port);
 });

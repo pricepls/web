@@ -4,6 +4,7 @@ var constants = app.get('constants');
 var mysqlDB = require('../lib/mysqldb')();
 mysqlDB.init();
 var utils = require('../lib/util');
+var request = require('../lib/request');
 var mongo = require('../lib/mongodb');
 var Chance=require('chance');
 var chance = new Chance();
@@ -285,6 +286,7 @@ var listing = {
         var vendor_name = req.body.vendor_name || undefined;
         var vendor_phone = req.body.vendor_phone || undefined;
         var vendor_contact = req.body.contact_no || undefined;
+        var vendor_email = req.body.email || undefined;
 
         if(vendor_name !==undefined && vendor_phone !== undefined && vendor_contact !== undefined){
 
@@ -306,7 +308,13 @@ var listing = {
                     var check_in = check_in_split[0];
                     var check_out=check_in_split[1];
                     var country = req.body.country;
+                    var country_short=undefined;
+                    var country_id = undefined;
+                    var state = undefined;
+                    var state_short = undefined;
+                    var state_id = undefined;
                     var city = req.body.city;
+                    var city_id = undefined;
                     var area = req.body.area;
                     var geocode=req.body.geocode;
                     var geocode_split=geocode.split(',');
@@ -350,6 +358,43 @@ var listing = {
                         },
                         function(callback){
 
+                            var geocode_url = configs.google.geocode_url;
+                            var geocode_key = configs.google.geocode_key;
+                            var qs = "latlng="+lat+","+long+"&key="+geocode_key;
+                            var final_url = geocode_url+qs;
+                            request.makeSimpleGetRequest(final_url,function(err,data){
+
+                                if(!err){
+                                    var result = JSON.parse(data).results;
+                                    if(result.length > 0){
+                                        var first_component = result[2];
+                                        var address_components = first_component.address_components;
+                                        area = address_components[1].long_name;
+                                        city = address_components[2].long_name;
+                                        state = address_components[4].long_name;
+                                        state_short = address_components[5].short_name;
+                                        country = address_components[5].long_name;
+                                        country_short = address_components[5].short_name;
+                                        mysqlDB.newCounty(country,country_short,function(err,id){
+                                            if(!err)
+                                                country_id= id;
+                                            mysqlDB.newState(state,state_short,country_id,function(err,id){
+                                                if(!err)
+                                                    state_id= id;
+                                                    mysqlDB.newCity(city,country_id,state_id,function(err,id){
+                                                        if(!err)
+                                                            city_id=id;
+                                                        callback();
+                                                    });
+                                            });
+                                        });
+
+                                    }
+                                }
+                            });
+                        },
+                        function(callback){
+
                             var room_1_name=req.body.room_1_name;
                             var room_1_price=req.body.room_1_price;
                             var room_2_name=req.body.room_2_name;
@@ -358,13 +403,13 @@ var listing = {
                             var room_3_price=req.body.room_3_price;
 
                             if(room_1_name || undefined && room_1_price !==undefined){
-                                room_types.push({name:room_1_name,price:room_1_price});
+                                room_types.push({room_type:room_1_name,price:room_1_price});
                             }
                             if(room_2_name || undefined && room_2_price !==undefined){
-                                room_types.push({name:room_2_name,price:room_2_price});
+                                room_types.push({room_type:room_2_name,price:room_2_price});
                             }
                             if(room_3_name || undefined && room_3_price !==undefined){
-                                room_types.push({name:room_3_name,price:room_3_price});
+                                room_types.push({room_type:room_3_name,price:room_3_price});
                             }
 
                             callback();
@@ -378,8 +423,9 @@ var listing = {
                         var query={
                             "listing_id":listing_id,
                             "area":area,
-                            "city_id":1,
+                            "city_id":city_id,
                             "city":city,
+                            "state":state,
                             "country":country,
                             "latitude":lat,
                             "longitude":long,

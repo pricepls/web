@@ -16,6 +16,12 @@
 
       "host":"localhost",
       "port":"27017"
+    },
+    "google":{
+
+      "geocode_url":"https://maps.googleapis.com/maps/api/geocode/json?",
+      "geocode_key":"AIzaSyCRh2PtkWrE3Dnbj0I7-KI-ELgjRGjd3kw"
+
     }
 
   },
