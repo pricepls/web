@@ -36,7 +36,9 @@
                                                             <td>{email}</td>
                                                             <td>{phone}</td>
                                                             <td>{signed_up_on}</td>
-                                                            <td>{status}</td>
+                                                            <td>
+                                                                {status}
+                                                            </td>
 
 
                                                         </tr>
@@ -48,6 +50,10 @@
                                             </table>
 
                                     </div>
+                                    <div class="text-right"><ul class="pager">
+                                        <li><a href="/admin/users/?page={page_data.previous}"><i class="fa fa-angle-left"></i> Previous</a></li>
+                                        <li><a href="/admin/users/?page={page_data.next}">Next<i class="fa fa-angle-right"></i></a></li>
+                                    </ul></div>
 
                             </div>
 

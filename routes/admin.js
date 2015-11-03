@@ -71,8 +71,10 @@ var admin = {
         results.users_today=0;
 
         var curdate= new Date();
-        //curdate=curdate.setHours(0,0,0,0);
-        //curdate=curdate.setTime();
+        curdate.setHours(0,0);
+        curdate = curdate.getTime();
+
+
         async.parallel([
             function(callback) {
                 mysqlDB.getVendorsCount(function(err,count){

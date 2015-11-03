@@ -12,6 +12,53 @@ var md5 = require('MD5');
 var shortId=require('shortid');
 var listing = {
 
+
+    showVendors :function(req,res,next){
+
+        var page = req.query.page || 1;
+        var start = constants.settings.per_page * (page - 1);
+        var end = constants.settings.per_page * page;
+
+        mysqlDB.getAllvendors(start,end,function(err,vendors){
+
+            if(err)
+                next(err);
+            else{
+
+                var vendor_data =[];
+                if(vendors.length >0){
+
+
+                    async.forEach(vendors,function(eachVendors,callback){
+
+                        var each_vendor_data={};
+                        each_vendor_data.id=eachVendors.id;
+                        each_vendor_data.name = eachVendors.name;
+                        each_vendor_data.phone=eachVendors.phone;
+                        each_vendor_data.contact=eachVendors.contact_no;
+                        each_vendor_data.created_date=utils.timeReadable(eachVendors.created_at);
+                        each_vendor_data.status=eachVendors.status;
+                        vendor_data.push(each_vendor_data);
+                        callback();
+
+                    },function(){
+
+                        if(err)
+                            next(err);
+                        else
+                            res.render('vendors',{vendors:vendor_data});
+
+                    });
+
+                }else{
+                    res.render('vendors',{message:constants.messages['1006']});
+                }
+
+            }
+
+        });
+
+    },
     showListings : function(req,res,next){
 
         var page = req.query.page || 1;
@@ -198,7 +245,7 @@ var listing = {
         }
 
     },
-    newVendor : function(req,res,next){
+    newListing : function(req,res,next){
 
         var countries = [];
         var cities =[];
@@ -279,7 +326,38 @@ var listing = {
 
 
     },
-    validateVendor : function(req,res,next){
+    newVendor:function(req,res,next){
+
+        res.render('vendor_new',{});
+    },
+    validateVendor:function(req,res,next){
+
+        var vendor_name = req.body.vendor_name || undefined;
+        var vendor_phone = req.body.vendor_phone || undefined;
+        var vendor_contact = req.body.contact_no || undefined;
+        var vendor_email = req.body.email || undefined;
+        if(vendor_name !==undefined && vendor_phone !== undefined && vendor_contact !== undefined && vendor_email !== undefined) {
+
+            var password = chance.word({length: 6});
+            var encrypted=md5(password);
+            mysqlDB.newVendor(vendor_phone,encrypted,vendor_contact,vendor_name,function(err,success){
+
+                if(err)
+                    next(err);
+                else{
+
+                    utils.sendVendorWelcome(vendor_name,vendor_phone,vendor_email,password);
+                    res.redirect('/admin/vendors/');
+
+                }
+
+            });
+
+        }
+
+
+    },
+    validateListing : function(req,res,next){
 
 
         var vendor_name = req.body.vendor_name || undefined;

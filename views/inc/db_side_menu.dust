@@ -13,6 +13,7 @@
            				<li><a href="/admin/users"><i class="ti ti-user"></i><span>Users</span></a></li>
            				<li><a href="/admin/bookings"><i class="ti ti-bar-chart"></i><span>Bookings</span></a></li>
            				<li><a href="/admin/requests"><i class="ti ti-comments"></i><span>Requests</span></a></li>
+                        <li><a href="/admin/vendors"><i class="ti ti-view-list"></i><span>Vendors</span></a></li>
            				<li><a href="/admin/listings"><i class="ti ti-view-list"></i><span>Listings</span></a></li>
            				<li><a href="/admin/settings"><i class="ti ti-settings"></i><span>Settings</span></a></li>
 

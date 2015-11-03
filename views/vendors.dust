@@ -1,0 +1,63 @@
+{>db_layout/}
+{<content}
+
+    <div class="page-content">
+
+        <ol class="breadcrumb">
+
+            <li class=""><a href="/admin/home">Home</a></li>
+            <li class=""><a href="/admin/vendors">vendors</a></li>
+
+        </ol>
+
+        <div class="container-fluid">
+
+            <div class="row">
+
+                <div class="col-xs-12">
+
+                    <div class="panel panel-default">
+
+                        <div class="panel-heading">
+                            <h2>Vendors</h2>
+                            <div class="panel-ctrls">
+                                            <span class="button-icon has-bg">
+                                                <a  href="/admin/vendor/new/"><i class="ti ti-plus"></i></a>
+                                            </span>
+                            </div>
+                        </div>
+                        <div class="panel-body">
+
+                            <table class="table">
+
+                                <thead><tr><th>ID</th><th>Name</th><th>Phone</th><th>Contact</th><th>Joined Date</th><th>Status</th></tr></thead>
+
+                                <tbody class="table-hover">
+
+                                    {#vendors}
+
+                                    <tr>
+
+                                        <td>{id}</td>
+                                        <td><a href="/admin/vendor/view?id={id}">{name}</a></td>
+                                        <td>{phone}</td>
+                                        <td>{contact}</td>
+                                        <td>{created_date}</td>
+                                        <td>{status}</td>
+                                    </tr>
+                                    {/vendors}
+
+                                </tbody>
+
+                            </table>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+{/content}

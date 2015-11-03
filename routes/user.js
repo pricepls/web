@@ -12,7 +12,7 @@ var user = {
 
     showUsers : function(req,res,next){
 
-        var page = req.query.page || 1;
+        var page = parseInt(req.query.page) || 1;
         var start = constants.settings.per_page * (page - 1);
         var end = constants.settings.per_page * page;
 
@@ -24,6 +24,8 @@ var user = {
 
                 var users_data = [];
                 var pages = [];
+                var next = page+1;
+                var previous = (page-1 > 1 ? page -1 : 1);
 
                 if(users.length >0 ){
 
@@ -68,7 +70,7 @@ var user = {
                     ],function(err){
 
                         if(err) next(err);
-                        res.render('users',{users:users_data,page_data:{pages:pages,first:pages.first,last:pages.last}});
+                        res.render('users',{users:users_data,page_data:{next:next,previous:previous}});
 
                     });
 
