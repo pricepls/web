@@ -1,4 +1,5 @@
-require('newrelic');
+if(process.env.ENVIORNMENT!='development')
+    require('newrelic');
 var express=require('express'),
     bodyParser=require('body-parser'),
     logger=require('morgan'),
@@ -28,7 +29,8 @@ app.use(session({genid: function(req) { return uuid.v4();},resave: false,saveUni
 
 var configFile= require('./config.json');
 
-if(app.get('env')=='development'){
+if(process.env.ENVIORNMENT =='development'){
+
     configs=configFile.development;
 }else{
     configs=configFile.production;
