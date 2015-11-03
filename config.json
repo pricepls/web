@@ -15,7 +15,17 @@
     "mongo":{
 
       "host":"localhost",
+<<<<<<< HEAD
       "port":"27018"
+=======
+      "port":"27017"
+    },
+    "google":{
+
+      "geocode_url":"https://maps.googleapis.com/maps/api/geocode/json?",
+      "geocode_key":"AIzaSyCRh2PtkWrE3Dnbj0I7-KI-ELgjRGjd3kw"
+
+>>>>>>> 922a00d01ae36961ed568d40303b0bfd9713acb2
     }
 
   },
