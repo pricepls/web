@@ -15,17 +15,12 @@
     "mongo":{
 
       "host":"localhost",
-<<<<<<< HEAD
       "port":"27018"
-=======
-      "port":"27017"
     },
     "google":{
 
       "geocode_url":"https://maps.googleapis.com/maps/api/geocode/json?",
       "geocode_key":"AIzaSyCRh2PtkWrE3Dnbj0I7-KI-ELgjRGjd3kw"
-
->>>>>>> 922a00d01ae36961ed568d40303b0bfd9713acb2
     }
 
   },
@@ -37,14 +32,14 @@
     },
     "mysql":{
 
-      "host":"localhost",
-      "user":"root",
-      "password":"root"
+      "host":"188.166.229.101",
+      "user":"pricepls",
+      "password":"wni8wCl600TR"
 
     },
     "mongo":{
 
-      "host":"localhost",
+      "host":"188.166.244.166",
       "port":"27017"
     }
 
