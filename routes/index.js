@@ -47,6 +47,7 @@ router.post('/admin/listing/new',/*auth.authenticate,*/listing.validateListing);
 router.get('/admin/vendor/new',/*auth.authenticate,*/listing.newVendor);
 router.post('/admin/vendor/new',/*auth.authenticate,*/listing.validateVendor);
 
+
 //router.get('/admin/booking/view','');
 
 //router.post('/admin/vendor/new',listing.createVendor);

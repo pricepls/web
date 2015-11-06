@@ -19,46 +19,60 @@ var listing = {
         var page = req.query.page || 1;
         var start = constants.settings.per_page * (page - 1);
         var end = constants.settings.per_page * page;
+        var query_phone = req.query.phone || undefined;
+        if(query_phone){
 
-        mysqlDB.getAllvendors(start,end,function(err,vendors){
+            mysqlDB.getVendorByPhone(query_phone,function(err,id){
 
-            if(err)
-                next(err);
-            else{
+                if(err)
+                    next(err);
+                else
+                    if(id !==null){
+                      return  res.redirect('/admin/vendor/view?id='+id);
+                    }
+            });
 
-                var vendor_data =[];
-                if(vendors.length >0){
+        }else {
+
+            mysqlDB.getAllvendors(start, end, function (err, vendors) {
+
+                if (err)
+                    next(err);
+                else {
+
+                    var vendor_data = [];
+                    if (vendors.length > 0) {
 
 
-                    async.forEach(vendors,function(eachVendors,callback){
+                        async.forEach(vendors, function (eachVendors, callback) {
 
-                        var each_vendor_data={};
-                        each_vendor_data.id=eachVendors.id;
-                        each_vendor_data.name = eachVendors.name;
-                        each_vendor_data.phone=eachVendors.phone;
-                        each_vendor_data.contact=eachVendors.contact_no;
-                        each_vendor_data.created_date=utils.timeReadable(eachVendors.created_at);
-                        each_vendor_data.status=eachVendors.status;
-                        vendor_data.push(each_vendor_data);
-                        callback();
+                            var each_vendor_data = {};
+                            each_vendor_data.id = eachVendors.id;
+                            each_vendor_data.name = eachVendors.name;
+                            each_vendor_data.phone = eachVendors.phone;
+                            each_vendor_data.contact = eachVendors.contact_no;
+                            each_vendor_data.created_date = utils.timeReadable(eachVendors.created_at);
+                            each_vendor_data.status = eachVendors.status;
+                            vendor_data.push(each_vendor_data);
+                            callback();
 
-                    },function(){
+                        }, function () {
 
-                        if(err)
-                            next(err);
-                        else
-                            res.render('vendors',{vendors:vendor_data});
+                            if (err)
+                                next(err);
+                            else
+                                res.render('vendors', {vendors: vendor_data});
 
-                    });
+                        });
 
-                }else{
-                    res.render('vendors',{message:constants.messages['1006']});
+                    } else {
+                        res.render('vendors', {message: constants.messages['1006']});
+                    }
+
                 }
 
-            }
-
-        });
-
+            });
+        }
     },
     showListings : function(req,res,next){
 
@@ -144,6 +158,8 @@ var listing = {
     viewVendor : function(req,res,next){
 
         var vendor_id = req.query.id || undefined;
+        console.log(vendor_id);
+
         var listing_details= {};
         var booking_details = [];
         var request_details = [];
@@ -192,7 +208,9 @@ var listing = {
                         if(err)
                             next(err);
                         else {
-                           listData.created_at= utils.timeReadable(parseInt(listData.created_at));
+                          if(listData) {
+                              listData.created_at = utils.timeReadable(parseInt(listData.created_at));
+                          }
                            listing_details = listData;
                            callback();
                         }

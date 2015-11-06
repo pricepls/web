@@ -59,8 +59,9 @@
                                                                             <tr><th>City</th><td>{listing.city}</td></tr>
                                                                             <tr><th>Country</th><td>{listing.country}</td></tr>
                                                                             <tr><th>Category</th><td>{listing.category}</td></tr>
-                                                                            <tr><th>Sub Type</th><td>{listing.sub_category}</td></tr>
+                                                                            <tr><th>Sub Type</th><td>{listing.subcategory}</td></tr>
                                                                             <tr><th>Star rating</th><td>{listing.star_rating}</td></tr>
+                                                                            <tr><th>Amenities</th><td>{listing.amenities}</td>
                                                                             <tr><th>Created On</th><td>{listing.created_at}</td></tr>
 
                                                                         </tbody>
@@ -112,6 +113,23 @@
 
                                             </div>
 
+
+                                        </div>
+
+                                    </div>
+
+                                    <div class="tab-pane" id="tab-images">
+                                        <div class="panel panel-default">
+
+                                            <div class="panel-heading"><h2>Images</h2></div>
+                                            <div class="panel-body">
+
+                                                {#listing.images}
+
+                                                <img src="{url}" alt="..." class="img-thumbnail img-responsive">
+
+                                                {/listing.images}
+                                            </div>
 
                                         </div>
 

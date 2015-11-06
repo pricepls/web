@@ -15,6 +15,10 @@
 
     "per_page":10
 
+  },
+  "application_constants":{
+
+    "play_url":"https://play.google.com/store/apps/details?id=com.olacabs.customer"
   }
 
 }

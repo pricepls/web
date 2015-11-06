@@ -13,7 +13,7 @@ var express=require('express'),
 
 app=express();
 var template_engine = 'dust';
-app.use(logger('dev'));
+//app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:true}));
 
