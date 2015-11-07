@@ -359,12 +359,12 @@ var listing = {
 
             var password = chance.word({length: 6});
             var encrypted=md5(password);
-            mysqlDB.newVendor(vendor_phone,encrypted,vendor_contact,vendor_name,function(err,success){
+            mysqlDB.newVendor(vendor_phone,encrypted,vendor_contact,vendor_name,vendor_email,function(err,success){
 
                 if(err)
                     next(err);
                 else{
-
+                        
                     utils.sendVendorWelcome(vendor_name,vendor_phone,vendor_email,password);
                     res.redirect('/admin/vendors/');
 
