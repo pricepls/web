@@ -364,7 +364,7 @@ var listing = {
                 if(err)
                     next(err);
                 else{
-                        
+
                     utils.sendVendorWelcome(vendor_name,vendor_phone,vendor_email,password);
                     res.redirect('/admin/vendors/');
 
