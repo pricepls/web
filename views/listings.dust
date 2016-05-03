@@ -39,8 +39,8 @@
                                                         <tr>
 
                                                             <td>{id}</td>
-                                                            <td><a href="/admin/vendor/view?id={id}">{listing_id}</a></td>
-                                                            <td><a href="/admin/vendor/view?id={id}">{name}</a></td>
+                                                            <td><a href="/admin/listing/view?id={listing_id}">{listing_number}</a></td>
+                                                            <td><a href="/admin/listing/view?id={listing_id}">{name}</a></td>
                                                             <td>{phone}</td>
                                                             <td>{contact}</td>
                                                             <td>{signed_up_on}</td>

@@ -1,0 +1,28 @@
+<header class="head"> <!-- Head Section Start-->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-xs-6 logo wow fadeIn">
+                <img class="img-responsive" src="images/logo.png" alt="Logo">
+            </div>
+            <div class="col-md-6 col-xs-6 social wow fadeIn">
+                <a href="https://twitter.com/priceplsapp" target="_blank"><img src="landing/images/twitter-icon.png" alt="Twitter" ></a>
+                <a href="https://www.facebook.com/pricepls" target="_blank"><img src="landing/images/facebook-icon.png" alt="Facebook" ></a>
+                {!<a href="#"><img src="landing/images/google-plus-icon.png" alt="Google Plus" target="_blank"></a>!}
+            </div>
+        </div><!-- Row End-->
+
+        <div class="row">
+            <div class="col-md-6 col-sm-12 main-content wow fadeInLeft">
+                <h1 class="funnytext">Get Custom Quotes for <br>your next Plan</h1>
+                <p>Tell us whats your next with one tap in our app, we ll get you custom tailored price quotes from our partners. We will take care of all the negotiations, arrangements etc.</p>
+
+                <a href="#"><button type="button" class="btn btn-default home-btn">Download Now</button></a>
+                {!<a href="#"><button type="button" class="btn btn-default home-btn">Watch Demo Video</button></a>!}
+
+            </div>
+            <div class="col-md-6 col-sm-12 phone-mockup wow fadeInRight">
+                <img class="img-responsive" src="landing/images/iphoneinhand.png" alt="Phone">
+            </div>
+        </div><!-- Row End -->
+    </div><!-- Container End -->
+</header><!-- Head Section End -->

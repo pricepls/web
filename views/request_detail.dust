@@ -50,13 +50,13 @@
 
                                                             <tbody>
 
-                                                                <tr><th>Request Id</th><td>{request.request_id}</td></tr>
+                                                                <tr><th>Request Id</th><td>{request.request_number}</td></tr>
                                                                 <tr><th>User ID</th><td>{request.user_id}</td></tr>
                                                                 <tr><th>User Name</th><td>{request.user_details.name}</td></tr>
                                                                 <tr><th>User Phone</th><td>{request.user_details.phone}</td></tr>
                                                                 <tr><th>User Email</th><td>{request.user_details.email}</td></tr>
 
-                                                                <tr><th>City</th><td>{request.city}</td></tr>
+                                                                <tr><th>City</th><td>{request.city_name}</td></tr>
                                                                 <tr><th>Guests</th><td>{request.no_of_guests}</td></tr>
                                                                 <tr><th>Nights</th><td>{request.no_of_nights}</td></tr>
                                                                 <tr><th>Origin City</th><td>{request.origin_city}</td></tr>
@@ -92,21 +92,20 @@
 
                                                 <table class="table">
 
-                                                    <thead><tr><th>ID</th><th>Name</th><th>Contact No</th><th>listing</th><th>PP Quotes</th></tr></thead>
+                                                    <thead><tr><th>ID</th><th>Name</th><th>listing</th><th>PP Quotes</th></tr></thead>
                                                     <tbody>
 
                                                         {#request.notified_vendors}
 
                                                             <tr>
                                                                 <td>{vendor_id}</td>
-                                                                <td>{vendor_name}</td>
-                                                                <td>{vendor_contact_no}</td>
-                                                                <td><a href="/admin/vendor/view/?id={vendor_id}">{listing_id}</td>
+                                                                <td>{hotel_name}</td>
+                                                                <td><a href="/admin/vendor/view/?id={vendor_id}&listing_id={listing_id}">{listing_number}</td>
                                                                 <td>
-                                                                  {#pp_quotes}
+                                                                  {#pp_price}
 
-                                                                   <p>{room_type} {price} &nbsp;  <span class="badge badge-primary">{pp_price} </span> &nbsp; <span class="badge badge-danger">{discount} &nbsp; % </span></p>
-                                                                  {/pp_quotes}
+                                                                   <p>{room_type} {was} &nbsp;  <span class="badge badge-primary">{price} </span> &nbsp; <span class="badge badge-danger">{discount}</span></p>
+                                                                  {/pp_price}
                                                             </tr>
                                                         {/request.notified_vendors}
 

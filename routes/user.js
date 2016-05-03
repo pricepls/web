@@ -94,6 +94,8 @@ var user = {
             var user_data={};
             var request_data=[];
             var booking_data=[];
+            var request_count = 0;
+            var booking_count = 0;
 
 
             async.parallel([
@@ -111,7 +113,7 @@ var user = {
                             if(userdata) {
 
                                 user_data=userdata;
-                                user_data.created_date = utils.timeReadable(parseInt(userdata.created_date));
+                                user_data.created_date = utils.timeReadable(parseInt(userdata.created_at));
 
                             }
                             callback();
@@ -127,7 +129,8 @@ var user = {
                     }
                     var projections = {
                         request_id : 1,
-                        created_date : 1
+                        created_date : 1,
+                        request_number:1
                     }
                     var sort = {
                         created_date:-1
@@ -141,9 +144,11 @@ var user = {
 
 
                             async.forEach(requestdata,function(request,callback){
+                                request_count++;
 
                                 var req={};
                                 req.id=request.request_id;
+                                req.number=request.request_number;
                                 req.posted_on=utils.timeReadable(parseInt(request.created_date));
                                 request_data.push(req);
                                 callback();
@@ -166,6 +171,8 @@ var user = {
                 if(err)
                     next(err);
 
+                user_data.requests = request_count;
+                user_data.bookings = booking_count;
                 res.render('user_detail', {user: user_data,requests:request_data});
 
             });

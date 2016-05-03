@@ -1,0 +1,117 @@
+{>layout_new/}
+{<content}
+
+
+    <section class="services"><!-- Head Section Start -->
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 col-sm-4 services-list wow fadeInUp">
+                    <img src="landing/images/post_a_plan.png" alt="icon">
+                    <h4>POST YOUR PLAN</h4>
+                    <p>Tell us what is your plan and few details about it.</p>
+                </div>
+
+                <div class="col-md-4 col-sm-4 services-list wow fadeInUp">
+                    <img src="landing/images/custom_offers.png" alt="icon">
+                    <h4>CUSTOM OFFERS</h4>
+                    <p>We will get you the best price offers for different things to make your plan the best ever.</p>
+                </div>
+
+                <div class="col-md-4 col-sm-4 services-list wow fadeInUp">
+                    <img src="landing/images/book_your_service.png" alt="icon">
+                    <h4>COMPLETE BOOKING</h4>
+                    <p>Review the offers and details of partners and finish the booking with no hassles.</p>
+                </div>
+
+            </div><!-- Row End -->
+        </div><!-- Container End -->
+    </section><!-- Services Section End -->
+
+    <section class="container features"><!-- Features Container Start -->
+        <div class="row">
+            <div class="col-md-12 features-title wow fadeIn">
+                <h1 >AMAZING FEATURES</h1>
+                <div class="dark-stroke"></div>
+                <p class="title-description">Few things you may like about Pricepls<br> or we think why we are diff. from others.</p>
+            </div>
+            <div class="col-md-4 col-sm-4 features-left">
+                <div class="features-list-1 wow fadeInLeft">
+                    <img src="landing/images/one_tap.png" alt="icon">
+                    <h4>One Tap for Offers</h4>
+                    <p>Get amazing offers with one tap.</p>
+                </div>
+                <div class="features-list-2 wow fadeInLeft">
+                    <img src="landing/images/custom_price_offers.png" alt="icon">
+                    <h4>Custom offers</h4>
+                    <p>All the offers which we are providing is only for you not for everyone.</p>
+                </div>
+                <div class="features-list-3 wow fadeInLeft">
+                    <img src="landing/images/no_modifications.png" alt="icon">
+                    <h4>No Modifications</h4>
+                    <p>We will offer you prices directly from providers, no modifications</p>
+                </div>
+            </div>
+
+            <div class="col-md-4 col-sm-4 appmockup wow fadeInUp">
+                <img class="phone-mockup" src="landing/images/iphonemockup.png" alt="phone mockup">
+                <img class="phone-img" src="landing/images/appimage.png" alt="phone image">
+            </div>
+
+            <div class="col-md-4 col-sm-4 features-right">
+                <div class="features-list-4 wow fadeInRight">
+                    <img src="landing/images/hand_picked.png" alt="icon">
+                    <h4>Hand picked providers</h4>
+                    <p>We closely verify all details before on-boarding any providers</p>
+                </div>
+                <div class="features-list-5 wow fadeInRight">
+                    <img src="landing/images/real_time_offers.png" alt="icon">
+                    <h4>Real time offers</h4>
+                    <p>Our offers are real-time, we don't keep it, just making it</p>
+                </div>
+                <div class="features-list-6 wow fadeInRight">
+                    <img src="landing/images/support_always.png" alt="icon">
+                    <h4>24/7 Supports</h4>
+                    <p>We will hold your back, until you finish off with the plan</p>
+                </div>
+            </div>
+        </div><!-- Row End -->
+    </section><!-- Features Container End -->
+
+
+    <section class="form-section"><!-- Subcribe Form Section Start -->
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 wow fadeIn">
+                    <h2>Lets me check it out !</h2>
+                    <div class="white-stroke"></div>
+                    <form class="form-inline">
+                        <div class="form-group">
+                            <label class="sr-only" for="emailInput">Email address</label>
+                            <input type="email" class="form-control" id="emailInput" placeholder="Write Your Email Adress Here">
+                        </div>
+                        <button type="submit" class="btn btn-default">LET ME IN</button>
+                    </form>
+                    <p class="title-description">You can download the app directly by clicking on download button</p>
+                </div>
+            </div><!-- Row End -->
+        </div><!-- Container End -->
+    </section><!-- Subcribe Form Section End -->
+
+
+
+    <section class="download-section"><!-- Download Section Start -->
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-sm-12 wow fadeInLeft">
+                    <h2>START TO GET CUSTOM OFFERS</h2>
+                    <p class="title-description">Join us to make your plans easy</p>
+                </div>
+                <div class="col-md-6 col-sm-12 wow fadeInRight">
+                    <a type="button" class="btn btn-default btn-lg" href="#">GET DOWNLOAD LINK!</a>
+                </div>
+            </div><!-- Row End -->
+        </div><!-- Container End -->
+    </section><!-- DOwnload Section End -->
+
+
+{/content}

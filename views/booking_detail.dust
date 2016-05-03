@@ -1,0 +1,161 @@
+{>db_layout/}
+{<content}
+
+        <div class="page-content">
+
+              <ol class="breadcrumb">
+
+                  <li class=""><a href="/admin/home">Home</a></li>
+                  <li class=""><a href="/admin/bookings">bookings</a></li>
+                  <li class=""><a href="/admin/booking/view/?id={booking.booking_id}">{booking.booking_number}</a></li>
+
+              </ol>
+
+              <div class="container-fluid">
+
+                    <div data-widget-group="group1" class="ui-sortable">
+
+                        <div class="row">
+
+                            <div class="col-sm-3">
+
+                                <div class="list-group list-group-alternate mb-n nav nav-tabs">
+
+                                    <a href="#tab-about"  role="tab" data-toggle="tab" class="list-group-item"><i class="ti ti-user"></i>Details</a>
+                                    <a href="#tab-states"  role="tab" data-toggle="tab" class="list-group-item"><i class="ti ti-comment-alt"></i>Booking states</a>
+                                    <a href="#tab-vendor"  role="tab" data-toggle="tab" class="list-group-item"><i class="ti ti-comment-alt"></i>Vendor Selected</a>
+
+                                </div>
+
+                            </div>
+
+                            <div class="col-sm-9">
+
+                                <div class="tab-content">
+
+                                    <div class="tab-pane active" id="tab-about">
+
+                                            <div class="panel panel-default">
+
+                                                    <div class="panel-heading"><h2>About</h2></div>
+                                                    <div class="panel-body">
+
+                                                        <div class="about-area">
+
+                                                            <div class="table-responsive">
+
+                                                                <table class="table">
+
+                                                                        <tbody>
+
+                                                                            <tr><th>Booking ID</th><td>{booking.booking_number}</td></tr>
+                                                                            <tr><th>Hotel Name</th><td>{booking.hotel_name}</td></tr>
+                                                                            <tr><th>Booked Time </th><td>{booking.booking_date}</td></tr>
+                                                                            <tr><th>Booked for Date</th><td>{booking.requested_date}</td></tr>
+                                                                            <tr><th>Status</th><td>{booking.booking_status}</td></tr>
+                                                                            <tr><th>User Name</th><td>{booking.user_details.name}</td></tr>
+                                                                            <tr><th>Payment Status</th><td>{booking.payment_status}</td></tr>
+                                                                            <tr><th>Room Type</th><td>{booking.room_type}</td></tr>
+                                                                            <tr><th>NIghts</th><td>{booking.no_of_nights}</td></tr>
+                                                                            <tr><th>Guests</th><td>{booking.no_of_guests}</td></tr>
+                                                                            <tr><th>Type</th><td>{booking.subcategory}</td></tr>
+
+                                                                        </tbody>
+
+                                                                </table>
+
+                                                            </div>
+
+                                                        </div>
+
+                                                    </div>
+
+                                            </div>
+                                    </div>
+
+                                    <div class="tab-pane" id="tab-states">
+
+
+                                        <div class="panel panel-default">
+
+
+                                            <div class="panel-heading"><h2>Booking states</h2></div>
+                                            <div class="panel-body">
+
+                                                <div class="table-responsive">
+
+                                                    <table class="table m-n">
+
+                                                        <thead><tr><th>State </th><th>Time</th></tr></thead>
+                                                        <tbody>
+
+                                                            {#booking.booking_states}
+
+                                                                <tr>
+                                                                    <td>{state}</td>
+                                                                    <td>{timeReadable}</td>
+                                                                </tr>
+
+                                                            {/booking.booking_states}
+
+                                                        </tbody>
+
+                                                    </table>
+
+                                                </div>
+
+                                            </div>
+
+
+                                        </div>
+
+                                    </div>
+
+                                    <div class="tab-pane" id="tab-vendor">
+
+
+                                        <div class="panel panel-default">
+
+
+                                            <div class="panel-heading"><h2>Selected Vendor</h2></div>
+                                            <div class="panel-body">
+
+                                                <div class="table-responsive">
+
+                                                    <table class="table m-n">
+
+                                                        <thead><tr><th>State </th><th>Time</th></tr></thead>
+                                                        <tbody>
+
+                                                            {#booking.booking_states}
+
+                                                            <tr>
+                                                                <td>{state}</td>
+                                                                <td>{timeReadable}</td>
+                                                            </tr>
+
+                                                            {/booking.booking_states}
+
+                                                        </tbody>
+
+                                                    </table>
+
+                                                </div>
+
+                                            </div>
+
+
+                                        </div>
+
+                                    </div>
+
+
+
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+              </div>
+{/content}

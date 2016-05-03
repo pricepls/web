@@ -1,0 +1,118 @@
+{>db_layout/}
+{<content}
+
+        <div class="page-content">
+
+              <ol class="breadcrumb">
+
+                  <li class=""><a href="/admin/home">Home</a></li>
+                  <li class=""><a href="/admin/vendors">vendors</a></li>
+                  <li class=""><a href="/admin/vendor/view/?id={vendor_details.id}">{vendor_details.name}</a></li>
+
+              </ol>
+
+              <div class="container-fluid">
+
+                    <div data-widget-group="group1" class="ui-sortable">
+
+                        <div class="row">
+
+                            <div class="col-sm-3">
+
+                                <div class="list-group list-group-alternate mb-n nav nav-tabs">
+
+                                    <a href="#tab-about"  role="tab" data-toggle="tab" class="list-group-item"><i class="ti ti-user"></i>About</a>
+                                    <a href="#tab-listings"  role="tab" data-toggle="tab" class="list-group-item"><i class="ti ti-comment-alt"></i>Listings</a>
+
+                                </div>
+
+                            </div>
+
+                            <div class="col-sm-9">
+
+                                <div class="tab-content">
+
+                                    <div class="tab-pane active" id="tab-about">
+
+                                            <div class="panel panel-default">
+
+                                                    <div class="panel-heading"><h2>About</h2></div>
+                                                    <div class="panel-body">
+
+                                                        <div class="about-area">
+
+                                                            <div class="table-responsive">
+
+                                                                <table class="table">
+
+                                                                        <tbody>
+
+                                                                            <tr><th>Vendor ID</th><td>{vendor_details.id}</td></tr>
+                                                                            <tr><th>Vendor Name</th><td>{vendor_details.name}</td></tr>
+                                                                            <tr><th>Phone</th><td>{vendor_details.number}</td></tr>
+                                                                            <tr><th>EMail</th><td>{vendor_details.email}</td></tr>
+                                                                            <tr><th>Status</th><td>{vendor_details.status}</td></tr>
+
+                                                                        </tbody>
+
+                                                                </table>
+
+                                                            </div>
+
+                                                        </div>
+
+                                                    </div>
+
+                                            </div>
+                                    </div>
+
+                                    <div class="tab-pane" id="tab-listings">
+
+
+                                        <div class="panel panel-default">
+
+
+                                            <div class="panel-heading"><h2>Listings</h2></div>
+                                            <div class="panel-body">
+
+                                                <div class="table-responsive">
+
+                                                    <table class="table m-n">
+
+                                                        <thead><tr><th>Listing Number</th><th>Name</th><th>Type</th><th>Status</th></tr></thead>
+                                                        <tbody>
+
+                                                            {#listings}
+
+                                                                <tr>
+                                                                    <td><a href="/admin/listing/view?id={listing_id}">{listing_number}</a></td>
+                                                                    <td>{name}</td>
+                                                                    <td>{subcategory}</td>
+                                                                    <td>{status}</td>
+                                                                </tr>
+
+                                                            {/listings}
+
+                                                        </tbody>
+
+                                                    </table>
+
+                                                </div>
+
+                                            </div>
+
+
+                                        </div>
+
+                                    </div>
+
+
+
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+              </div>
+{/content}

@@ -6,8 +6,8 @@
               <ol class="breadcrumb">
 
                   <li class=""><a href="/admin/home">Home</a></li>
-                  <li class=""><a href="/admin/users">users</a></li>
-                  <li class=""><a href="/admin/user/view/?id={user.user_id}">{user.name}</a></li>
+                  <li class=""><a href="/admin/listings">listings</a></li>
+                  <li class=""><a href="/admin/listing/view/?id={listing_details.listing_id}">{listing_details.listing_number}</a></li>
 
               </ol>
 
@@ -23,8 +23,7 @@
 
                                     <a href="#tab-about"  role="tab" data-toggle="tab" class="list-group-item"><i class="ti ti-user"></i>About</a>
                                     <a href="#tab-images"  role="tab" data-toggle="tab" class="list-group-item"><i class="ti ti-user"></i>Images</a>
-                                    <a href="#tab-requests"  role="tab" data-toggle="tab" class="list-group-item"><i class="ti ti-comments"></i>Requests</a>
-                                    <a href="#tab-bookings"  role="tab" data-toggle="tab" class="list-group-item"><i class="ti ti-bar-chart"></i>Bookings</a>
+                                    <a href="#tab-prices"  role="tab" data-toggle="tab" class="list-group-item"><i class="ti ti-user"></i>Price Details</a>
                                     <a href="#tab-reviews"  role="tab" data-toggle="tab" class="list-group-item"><i class="ti ti-comment-alt"></i>Reviews</a>
 
                                 </div>
@@ -51,17 +50,14 @@
                                                                         <tbody>
 
                                                                             <tr><th>Vendor ID</th><td>{listing.vendor_id}</td></tr>
-                                                                            <tr><th>Vendor Name</th><td>{listing.vendor_details.name}</td></tr>
-                                                                            <tr><th>Phone</th><td>{listing.vendor_details.phone}</td></tr>
-                                                                            <tr><th>Contact No</th><td>{listing.vendor_details.contact_no}</td></tr>
-                                                                            <tr><th>Listing ID</th><td>{listing.listing_id}</td></tr>
+                                                                            <tr><th>Listing ID</th><td>{listing.listing_number}</td></tr>
                                                                             <tr><th>Area</th><td>{listing.area}</td></tr>
                                                                             <tr><th>City</th><td>{listing.city}</td></tr>
                                                                             <tr><th>Country</th><td>{listing.country}</td></tr>
                                                                             <tr><th>Category</th><td>{listing.category}</td></tr>
                                                                             <tr><th>Sub Type</th><td>{listing.subcategory}</td></tr>
                                                                             <tr><th>Star rating</th><td>{listing.star_rating}</td></tr>
-                                                                            <tr><th>Amenities</th><td>{listing.amenities}</td>
+                                                                            {!<tr><th>Amenities</th><td>{listing.amenities}</td>!}
                                                                             <tr><th>Created On</th><td>{listing.created_at}</td></tr>
 
                                                                         </tbody>
@@ -77,46 +73,7 @@
                                             </div>
                                     </div>
 
-                                    <div class="tab-pane" id="tab-bookings">
 
-
-                                        <div class="panel panel-default">
-
-
-                                            <div class="panel-heading"><h2>Bookings</h2></div>
-                                            <div class="panel-body">
-
-                                                <div class="table-responsive">
-
-                                                    <table class="table m-n">
-
-                                                        <thead><tr><th>ID</th><th>Request ID</th><th>User</th><th>Booked on</tr></thead>
-                                                        <tbody>
-
-                                                            {#bookings}
-
-                                                                <tr>
-                                                                    <td><a href="/admin/booking/view?id={booking_id}">{booking_id}</a></td>
-                                                                    <td><a href="/admin/request/view/?id={request_id}">{request_id}</td>
-                                                                    <td><a href="/admin/user/view/?id={user_id}">{user_details.name}</a></td>
-                                                                    <td>{created_at}</td>
-
-                                                                </tr>
-
-                                                            {/bookings}
-
-                                                        </tbody>
-
-                                                    </table>
-
-                                                </div>
-
-                                            </div>
-
-
-                                        </div>
-
-                                    </div>
 
                                     <div class="tab-pane" id="tab-images">
                                         <div class="panel panel-default">
@@ -135,43 +92,35 @@
 
                                     </div>
 
-                                    <div class="tab-pane" id="tab-requests">
-
-
+                                    <div class="tab-pane" id="tab-prices">
                                         <div class="panel panel-default">
 
-
-                                            <div class="panel-heading"><h2>Request</h2></div>
+                                            <div class="panel-heading"><h2>Prices</h2></div>
                                             <div class="panel-body">
 
-                                                <div class="table-responsive">
+                                                <table class="table">
 
-                                                    <table class="table m-n">
+                                                    <tbody>
 
-                                                        <thead><tr><th>Request ID</th><th>User</th><th>Posted on</tr></thead>
-                                                        <tbody>
+                                                    <tr><th>Name</th><th>Price</th></tr>
 
-                                                            {#requests}
+                                                {#listing.prices}
 
-                                                                <tr>
-                                                                    <td><a href="/admin/request/view/?id={request_id}">{request_id}</td>
-                                                                    <td><a href="/admin/user/view/?id={user_id}">{user_details.name}</a></td>
-                                                                    <td>{created_at}</td>
+                                                <tr><th>{name}</th><th>{price}</th></tr>
 
-                                                                </tr>
+                                                {/listing.prices}
 
-                                                            {/requests}
 
-                                                        </tbody>
+                                                    </tbody>
 
-                                                    </table>
-
-                                                </div>
-
+                                                </table>
                                             </div>
 
-
                                         </div>
+
+                                    </div>
+
+
 
                                     </div>
 

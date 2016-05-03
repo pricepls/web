@@ -1,0 +1,28 @@
+<footer class="footer-info"><!-- Footer Section Start -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 col-sm-4 wow fadeInLeft">
+                <img src="images/logo.png" alt="Footer-Logo">
+            </div>
+            <div class="col-md-4 col-sm-4 footer-nav wow fadeInUp">
+                <ul>
+                    <li><a href="#">Company</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="col-md-4 col-sm-4 wow fadeInRight">
+                <p>Copyright &copy; - 2016 Pricepls Technologies Pvt. Ltd</p>
+            </div>
+        </div><!-- Row End -->
+    </div><!-- Container End -->
+</footer><!-- Footer Section End -->
+
+
+
+{!
+<footer class="row" id="footer">
+    <div class="footer-links">
+        <a href="https://mixpanel.com/f/partner"><img src="//cdn.mxpnl.com/site_media/images/partner/badge_blue.png" alt="Mobile Analytics" /></a>
+    </div>
+</footer>!}

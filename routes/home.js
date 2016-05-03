@@ -10,7 +10,7 @@ var home ={
     index : function(req,res,next){
         res.locals.session = req.session;
         var data ={};
-        res.render('index',data);
+        res.render('index_new',data);
 
     },
     sendInvite : function(req,res,next){

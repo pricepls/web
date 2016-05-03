@@ -42,6 +42,8 @@ router.post('/admin/amenities/new/',settings.validateAmenity);
 router.get('/admin/user/view',auth.authenticate,user.viewUser);
 router.get('/admin/request/view',auth.authenticate,request.viewRequest);
 router.get('/admin/vendor/view',auth.authenticate,listing.viewVendor);
+router.get('/admin/listing/view',auth.authenticate,listing.viewListing);
+router.get('/admin/booking/view',auth.authenticate,booking.viewBooking);
 router.get('/admin/listing/new',auth.authenticate,listing.newListing);
 router.post('/admin/listing/new',auth.authenticate,listing.validateListing);
 router.get('/admin/vendor/new',auth.authenticate,listing.newVendor);
