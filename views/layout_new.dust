@@ -4,8 +4,9 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="description" content="Last minutes deals, Marriage,Travel,Activities,Custom offers,Racing,Driving,best plans for trip, Planning for a trip, and some event, get offers directly from your vendors, everything is custom made for you for you only.">
+    <meta name="keywords" content="Trip,travel,last minute deals,activities,rent a car,rent a bike,houseboat,hotel,resort,homestay,kayaking,driving,hill stations.paragliding,surfing,photographer,marriage,birthday parties,catering,event management,offers,deals,dine out,restaurant deals">
+    <meta name="author" content="Adarsh Raj">
     <link rel="stylesheet" type="text/css" href="landing/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="landing/css/jquery.funnyText.css"/>
     <link rel="stylesheet" type="text/css" href="landing/css/animate.css">
@@ -72,7 +73,7 @@
 </script>
 
 <script type="text/javascript">
-    $(document).ready(function () {
+   /* $(document).ready(function () {
         $('.funnytext').funnyText({
             speed: 200,
             borderColor: 'none',
@@ -81,7 +82,7 @@
             fontSize: '44px',
             direction: 'both'
         });
-    });
+    });*/
 
 </script>
 
