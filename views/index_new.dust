@@ -8,7 +8,7 @@
                 <div class="col-md-4 col-sm-4 services-list wow fadeInUp">
                     <img src="landing/images/post_a_plan.png" alt="icon">
                     <h4>POST YOUR PLAN</h4>
-                    <p>Tell us what is your plan and few details about it.</p>
+                    <p>Tell us a few details about your plan</p>
                 </div>
 
                 <div class="col-md-4 col-sm-4 services-list wow fadeInUp">
@@ -38,17 +38,17 @@
                 <div class="features-list-1 wow fadeInLeft">
                     <img src="landing/images/one_tap.png" alt="icon">
                     <h4>One Tap for Offers</h4>
-                    <p>Get amazing offers with one tap.</p>
+                    <p>Get amazing offers with just one tap.</p>
                 </div>
                 <div class="features-list-2 wow fadeInLeft">
                     <img src="landing/images/custom_price_offers.png" alt="icon">
                     <h4>Custom offers</h4>
-                    <p>All the offers which we are providing is only for you not for everyone.</p>
+                    <p>Offers which we provide is exclusive to you and only you.</p>
                 </div>
                 <div class="features-list-3 wow fadeInLeft">
                     <img src="landing/images/no_modifications.png" alt="icon">
                     <h4>No Modifications</h4>
-                    <p>We will offer you prices directly from providers, no modifications</p>
+                    <p>Prices quoted will be from the providers directly with no third party modifications.</p>
                 </div>
             </div>
 
@@ -66,11 +66,11 @@
                 <div class="features-list-5 wow fadeInRight">
                     <img src="landing/images/real_time_offers.png" alt="icon">
                     <h4>Real time offers</h4>
-                    <p>Our offers are real-time, we don't keep it, just making it</p>
+                    <p>Our offers are real-time, we make it when you need it!</p>
                 </div>
                 <div class="features-list-6 wow fadeInRight">
                     <img src="landing/images/support_always.png" alt="icon">
-                    <h4>24/7 Supports</h4>
+                    <h4>24/7 Support</h4>
                     <p>We will hold your back, until you finish off with the plan</p>
                 </div>
             </div>
