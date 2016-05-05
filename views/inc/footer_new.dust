@@ -6,9 +6,10 @@
             </div>
             <div class="col-md-4 col-sm-4 footer-nav wow fadeInUp">
                 <ul>
-                    <li><a href="#">Company</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Contact</a></li>
+                    {!<li><a href="/terms">Company</a></li>!}
+                    <li><a href="/terms">Terms</a></li>
+                    <li><a href="/privacy">Privacy</a></li>
+                    <li><a href="/contact">Contact</a></li>
                 </ul>
             </div>
             <div class="col-md-4 col-sm-4 wow fadeInRight">

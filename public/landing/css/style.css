@@ -42,6 +42,14 @@ h1, h2, h3, h4, h5, h6, p, img, .btn {
     min-height: 652px;
     width: auto;
 }
+.head_other{
+	background-image: url("../images/bg-img-1.jpg");
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	border-width: 0;
+	width: auto;
+}
 
 .logo{
 	margin-top: 50px;

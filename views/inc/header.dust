@@ -1,19 +1,18 @@
-  <!-- Status: Shows if the subscription succeeded or not. -->
-        <div id="loading">
-            <span class="status icon"></span>
+<header class="head_other"> <!-- Head Section Start-->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-xs-6 logo wow fadeIn">
+                <a href="/"><img class="img-responsive" src="images/logo.png" alt="Logo"></a>
+            </div>
+            <div class="col-md-6 col-xs-6 social wow fadeIn">
+                <a href="https://twitter.com/priceplsapp" target="_blank"><img src="landing/images/twitter-icon.png"
+                                                                               alt="Twitter"></a>
+                <a href="https://www.facebook.com/pricepls" target="_blank"><img src="landing/images/facebook-icon.png"
+                                                                                 alt="Facebook"></a>
+                {!<a href="#"><img src="landing/images/google-plus-icon.png" alt="Google Plus" target="_blank"></a>!}
+            </div>
         </div>
-
-        <!-- Header: Your site logo, tagline and project status. -->
-        <header class="row" id="header">
-            <div class="content">
-                <!-- Logo & Tagline: Delete "class="logo"" to remove the logo or upload your own logo to "assets/images". -->
-                <span class="">
-                    <img src='/images/logo.png'>
-                </span>
-            </div>
-
-            <!-- Status: Change the numbers below to reflect your project status. -->
-            <div class="status" style="width: 75%;">
-                <span>75%</span>
-            </div>
-        </header>
+        <!-- Row End-->
+    </div>
+    <!-- Container End -->
+</header><!-- Head Section End -->

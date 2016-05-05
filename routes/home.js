@@ -13,6 +13,20 @@ var home ={
         res.render('index_new',data);
 
     },
+    privacy : function(req,res,next){
+
+        res.locals.session = req.session;
+        var data ={};
+        res.render('privacy',data);
+
+    },
+    terms :function(req,res,next){
+
+        res.locals.session = req.session;
+        var data ={};
+        res.render('terms',data);
+
+    },
     sendInvite : function(req,res,next){
         res.locals.session = req.session;
 

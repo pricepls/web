@@ -1,0 +1,46 @@
+{>layout/}
+{<content}
+
+    <div class="container white_bg">
+
+        <div class="row">
+
+            <div class="col-lg-12">
+
+                <div class="privacy">
+
+                    <h2>Privacy Policy</h2>
+                    <h3>1: What Personal Information Does Pricepls Collect?</h3>
+                    <p>
+                        Your phone number
+                        Your location information from time to time
+                        Any personal information that you choose to provide such as name, email, gender.
+                        Information about your device such as hardware information, operating system version, carrier info if available.
+                    </p>
+                    <h3>2: Why is this information collected?</h3>
+                    <p>Your Services account will be associated with your phone number and this account will be used for all our Services that you use. Information you provide to one of our Services may be used with other Services from us that you or your friends use. For example, location information we receive in connection with your use of one of our apps may be used to customize the content you and your friends see in another of our apps. We may also draw upon this Personal Information in order to adapt the Services of our community to your needs, to research the effectiveness of our network and Services, and to develop new tools for the community.The contact information you provide may be used by Pricepls to send you timely and relevant promotions. By accepting this privacy policy, you give Pricepls the right to contact you by SMS or e-mail for such promotions.</p>
+                    <h3>3: How is My Information Shared?</h3>
+                    <p>
+                        Personal Information about our users is an integral part of our business. We neither rent nor sell your identifiable personal Information to anyone.
+
+                        Information you provide about your plans will be shared with our partners in the city, where you are choosing to use our services. This will help us to serve you with better offers. This informations are not shared publicly, and are accessible only through our partner app and which is strictly using a proper login credentials.
+
+                        Individuals reading this information may use it or disclose it to other individuals or entities without our control and without your knowledge. </p>
+                    <h3>4: Determining your location</h3>
+                    <p>The Services deal with location, so in order to work, the Services need to know your location. Whenever you open and use/interact with our apps on your mobile device or go to one of our Sites, we use the location information from your mobile device or browser (e.g., latitude and longitude) to tailor the Services experience to your current location (i.e., we'll show you a list of nearby locations, friends and tips). This information is NOT shared in a form that is identified with you with others unless you are using a service that they offer. Also, the Services use your mobile device's ‘background location to provide the Services, including to send you notifications of tips/friends/plans/interesting things etc. near you. If you have ‘background location turned on, the Pricepls app will, from time to time, tell us about your device's location even if you are not directly interacting with the application</p>
+                    <h3>5: Your Location History</h3>
+                    <p>
+                        We store your location history to provide you better quality offers. This information is treated as private under any and all circumstances and is NEVER shared.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+{/content}

@@ -13,6 +13,8 @@ var booking = require('./booking.js');
 var auth = require('../lib/auth.js');
 
 router.get('/',home.index);
+router.get('/terms',home.terms);
+router.get('/privacy',home.privacy);
 router.post('/inviteme',home.sendInvite);
 router.get('/login',admin.login);
 router.post('/login',admin.validateLogin);

@@ -2,7 +2,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-6 col-xs-6 logo wow fadeIn">
-                <img class="img-responsive" src="images/logo.png" alt="Logo">
+                <a href="/"><img class="img-responsive" src="images/logo.png" alt="Logo"></a>
             </div>
             <div class="col-md-6 col-xs-6 social wow fadeIn">
                 <a href="https://twitter.com/priceplsapp" target="_blank"><img src="landing/images/twitter-icon.png" alt="Twitter" ></a>
