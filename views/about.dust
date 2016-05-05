@@ -1,0 +1,82 @@
+{>layout/}
+{<content}
+    <div class="container white_bg">
+
+        <div class="row">
+
+            <div class="col-lg-12">
+
+                <div class="privacy">
+
+                    <h2>About us</h2>
+
+                    <p>
+
+                        We are very young and vibrant start up, based on Bangalore. <br/>
+                        Our aim is make your next plan whatever it would be a trip, an event, or just an outing with friends or family to be pocket friendly and hassle free.
+                        <br/>
+                        Here are few amazing things about us.
+
+                    </p>
+
+                </div>
+
+                <section class="container features"><!-- Features Container Start -->
+                    <div class="row">
+                        <div class="col-md-12 features-title wow fadeIn">
+                            <h1 >AMAZING FEATURES</h1>
+                            <div class="dark-stroke"></div>
+                            <p class="title-description">Few things you may like about Pricepls<br> or we think why we are diff. from others.</p>
+                        </div>
+                        <div class="col-md-4 col-sm-4 features-left">
+                            <div class="features-list-1 wow fadeInLeft">
+                                <img src="landing/images/one_tap.png" alt="icon">
+                                <h4>One Tap for Offers</h4>
+                                <p>Get amazing offers with just one tap.</p>
+                            </div>
+                            <div class="features-list-2 wow fadeInLeft">
+                                <img src="landing/images/custom_price_offers.png" alt="icon">
+                                <h4>Custom offers</h4>
+                                <p>Offers which we provide is exclusive to you and only you.</p>
+                            </div>
+                            <div class="features-list-3 wow fadeInLeft">
+                                <img src="landing/images/no_modifications.png" alt="icon">
+                                <h4>No Modifications</h4>
+                                <p>Prices quoted will be from the providers directly with no third party modifications.</p>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4 col-sm-4 appmockup wow fadeInUp">
+                            <img class="phone-mockup" src="landing/images/iphonemockup.png" alt="phone mockup">
+                            <img class="phone-img" src="landing/images/appimage.png" alt="phone image">
+                        </div>
+
+                        <div class="col-md-4 col-sm-4 features-right">
+                            <div class="features-list-4 wow fadeInRight">
+                                <img src="landing/images/hand_picked.png" alt="icon">
+                                <h4>Hand picked providers</h4>
+                                <p>We closely verify all details before on-boarding any providers</p>
+                            </div>
+                            <div class="features-list-5 wow fadeInRight">
+                                <img src="landing/images/real_time_offers.png" alt="icon">
+                                <h4>Real time offers</h4>
+                                <p>Our offers are real-time, we make it when you need it!</p>
+                            </div>
+                            <div class="features-list-6 wow fadeInRight">
+                                <img src="landing/images/support_always.png" alt="icon">
+                                <h4>24/7 Support</h4>
+                                <p>We will hold your back, until you finish off with the plan</p>
+                            </div>
+                        </div>
+                    </div><!-- Row End -->
+                </section><!-- Features Container End -->
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+{/content}

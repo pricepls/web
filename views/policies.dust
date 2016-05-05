@@ -1,0 +1,81 @@
+{>layout/}
+{<content}
+
+    <div class="container white_bg">
+
+        <div class="row">
+
+            <div class="col-lg-12">
+
+                <div class="privacy">
+
+                    <h3>General Terms</h3>
+
+                    <p>
+                    <ul>
+                        <li>
+                            The primary guest must be at least 18 years of age to be able to check-in the hotel.
+                        </li>
+                        <li>
+                            It is mandatory for guests to present valid photo identification at the time of check-in.
+                            According to government regulations, a valid Photo ID has to be carried by every person
+                            above the age of 18 staying at the hotel. The identification proofs accepted are Driving
+                            License, Voter ID Card, and Passport. Without valid ID the guest will not be allowed to
+                            check-in.
+
+                        </li>
+                        <li>PAN cards are not accepted as a valid ID card.</li>
+
+                        <li>Should any action by a guest be deemed inappropriate by the hotel, or if any inappropriate
+                            behaviour is brought to the attention of the hotel, the hotel reserves the right, after the
+                            allegations have been investigated, to take action against the guest.
+                        </li>
+                        <li>Certain destinations may have different policies for specific times during the year.
+                        </li>
+                        <li>
+                            Guests shall be liable for any damage, except normal wear and tear to Hotel asset. Guest
+                            shall keep the Hotel room in a good condition and maintain hygiene and cleanliness.
+                        </li>
+                        <li>
+                            Certain policies are booking specific and are informed to the customer while making the
+                            booking.
+                        </li>
+
+                    </ul>
+
+                    </p>
+                    <h3>Cancellation policies</h3>
+                    <h5><b>Cancellation charges</b></h5>
+
+                    <p>
+                        If you are cancelling your booking
+                    <ul>
+
+                        <li>1 week prior to the date 100% refund.</li>
+                        <li>48 hours prior to the date 50% refund</li>
+                        <li>24 hours prior to the date no refund</li>
+                    </ul>
+
+                    </p>
+
+                    <h5><b>How to cancel</b></h5>
+
+                    <p>
+                        You can cancel your booking using our mobile app. You can also call us on +91-9620522543 to
+                        cancel your booking. The applicable refund amount will be credited to you within 4 working days.
+                        However, it may take an additional 3-14 working days to reflect in your account, depending on
+                        the processing time taken by your bank.
+                    </p>
+
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+{/content}

@@ -27,6 +27,27 @@ var home ={
         res.render('terms',data);
 
     },
+    general :function(req,res,next){
+
+        res.locals.session = req.session;
+        var data ={};
+        res.render('policies',data);
+
+    },
+    contact :function(req,res,next){
+
+        res.locals.session = req.session;
+        var data ={};
+        res.render('contact',data);
+
+    },
+    about :function(req,res,next){
+
+        res.locals.session = req.session;
+        var data ={};
+        res.render('about',data);
+
+    },
     sendInvite : function(req,res,next){
         res.locals.session = req.session;
 

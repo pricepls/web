@@ -6,7 +6,8 @@
             </div>
             <div class="col-md-4 col-sm-4 footer-nav wow fadeInUp">
                 <ul>
-                    {!<li><a href="/terms">Company</a></li>!}
+                    <li><a href="/about">About us</a></li>
+                    <li><a href="/service_policies">Service policies</a></li>
                     <li><a href="/terms">Terms</a></li>
                     <li><a href="/privacy">Privacy</a></li>
                     <li><a href="/contact">Contact</a></li>

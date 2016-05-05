@@ -1,0 +1,41 @@
+{>layout/}
+{<content}
+    <div class="container white_bg">
+
+        <div class="row">
+
+            <div class="col-lg-12">
+
+                <div class="privacy">
+                    <h3>Contact us</h3>
+
+                    <h5><b>Office Address</b></h5>
+                    <p>
+                        Pricepls Technologies Private Limited <br>
+                        Level 8 <br>
+                        Umiya Business Bay <br>
+                        Tower 1, <br>
+                        Cessna Business Park, <br>
+                        Sarjapur Ring Road, <br>
+                        Kadubeesanahalli, <br>
+                        Bengaluru - Karnataka, India
+
+                    </p>
+
+                    <h5><b>Email us</b></h5>
+                    <p>contact@pricepls.com</p>
+
+                    <h5><b>Call us</b></h5>
+                    <p> +91-80 6757 7893</p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+{/content}
