@@ -1,4 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Raleway:700,400,300);
+@font-face { font-family: Relish; src: url('../fonts/Relish Pro.ttf'); }
 
 html, h1, h2, h3, h4, h5, h6, p {
     font-family: 'Raleway', sans-serif;
@@ -49,6 +50,19 @@ h1, h2, h3, h4, h5, h6, p, img, .btn {
 	background-size: cover;
 	border-width: 0;
 	width: auto;
+}
+.logo_span{
+	font-family: Relish;
+	color: white;
+	font-size: 50px;
+	text-decoration: none;
+
+}
+.logo_span_footer {
+	font-size:30px !important;
+}
+.logo_span:hover{
+	text-decoration: none;
 }
 
 .logo{

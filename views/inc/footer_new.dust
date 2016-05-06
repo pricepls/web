@@ -2,7 +2,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-4 col-sm-4 wow fadeInLeft">
-                <img src="images/logo.png" alt="Footer-Logo">
+                <span style="display: inline" class="logo_span logo_span_footer ">pricepls</span>
             </div>
             <div class="col-md-4 col-sm-4 footer-nav wow fadeInUp">
                 <ul>
