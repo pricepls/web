@@ -10,6 +10,8 @@
     <link rel="stylesheet" type="text/css" href="landing/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="landing/css/jquery.funnyText.css"/>
     <link rel="stylesheet" type="text/css" href="landing/css/animate.css">
+    <link rel="shortcut icon" href="landing/images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="landing/images/favicon.ico" type="image/x-icon">
 
     <!-- Important Owl stylesheet -->
     <link rel="stylesheet" href="landing/css/owl.carousel.css">
